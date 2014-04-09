@@ -1,0 +1,3 @@
+http://bs.wikipedia.org/wiki/Krvne_grupe 
+http://social.msdn.microsoft.com/Forums/vstudio/en-US/0911cf11-5f5d-4384-b261-04463ef59b54/emailing-through-desktop-app-c?forum=wpf
+http://stackoverflow.com/questions/2621682/import-mysql-database-into-a-ms-sql-server
