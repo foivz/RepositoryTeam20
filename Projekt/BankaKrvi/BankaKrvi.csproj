@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94E9BF3C-0774-4C65-8AE0-071390ABC1EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BankaKrvi</RootNamespace>
+    <AssemblyName>BankaKrvi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBankaKrvi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankaKrvi.Designer.cs">
+      <DependentUpon>frmBankaKrvi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajTest.Designer.cs">
+      <DependentUpon>frmDodajTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodavanjeDonacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodavanjeDonacije.Designer.cs">
+      <DependentUpon>frmDodavanjeDonacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodavanjeDoze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodavanjeDoze.Designer.cs">
+      <DependentUpon>frmDodavanjeDoze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodavanjePacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodavanjePacijenta.Designer.cs">
+      <DependentUpon>frmDodavanjePacijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodavanjeTransfuzije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodavanjeTransfuzije.Designer.cs">
+      <DependentUpon>frmDodavanjeTransfuzije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHladnjak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHladnjak.Designer.cs">
+      <DependentUpon>frmHladnjak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledDonacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledDonacija.Designer.cs">
+      <DependentUpon>frmPregledDonacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledHladnjaka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledHladnjaka.Designer.cs">
+      <DependentUpon>frmPregledHladnjaka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledPacijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledPacijenata.Designer.cs">
+      <DependentUpon>frmPregledPacijenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledStanjaKrvi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledStanjaKrvi.Designer.cs">
+      <DependentUpon>frmPregledStanjaKrvi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledTransfuzija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledTransfuzija.Designer.cs">
+      <DependentUpon>frmPregledTransfuzija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBankaKrvi.resx">
+      <DependentUpon>frmBankaKrvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajTest.resx">
+      <DependentUpon>frmDodajTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodavanjeDonacije.resx">
+      <DependentUpon>frmDodavanjeDonacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodavanjeDoze.resx">
+      <DependentUpon>frmDodavanjeDoze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodavanjePacijenta.resx">
+      <DependentUpon>frmDodavanjePacijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodavanjeTransfuzije.resx">
+      <DependentUpon>frmDodavanjeTransfuzije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHladnjak.resx">
+      <DependentUpon>frmHladnjak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledDonacija.resx">
+      <DependentUpon>frmPregledDonacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledHladnjaka.resx">
+      <DependentUpon>frmPregledHladnjaka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledPacijenata.resx">
+      <DependentUpon>frmPregledPacijenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledStanjaKrvi.resx">
+      <DependentUpon>frmPregledStanjaKrvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledTransfuzija.resx">
+      <DependentUpon>frmPregledTransfuzija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
