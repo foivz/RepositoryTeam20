@@ -1,6 +1,6 @@
 ﻿namespace BankaKrvi
 {
-    partial class frmMain
+    partial class frmDodavanjeDonacije
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // frmMain
+            // frmDodavanjeDonacije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 291);
-            this.Name = "frmMain";
-            this.Text = "Banka krvi";
+            this.ClientSize = new System.Drawing.Size(624, 442);
+            this.Name = "frmDodavanjeDonacije";
+            this.Text = "Dodavanje  donacije";
             this.ResumeLayout(false);
 
         }
@@ -44,4 +44,3 @@
         #endregion
     }
 }
-

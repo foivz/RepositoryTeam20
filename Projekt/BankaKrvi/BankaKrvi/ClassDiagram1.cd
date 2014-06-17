@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BankaKrvi.frmBankaKrvi" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UYAABhgAACmAAAEAAQSABBICAwQAAAIAAQAgEKhOAAA=</HashCode>
+      <FileName>frmBankaKrvi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmDodajTest" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAABAAAAQAAAAAAA=</HashCode>
+      <FileName>frmDodajTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmDodavanjeDonacije" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmDodavanjeDonacije.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmDodavanjePacijenta">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAACAAAACAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>frmDodavanjePacijenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmDodavanjeTransfuzije" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAACAAABAEAACAAAhCAAgAAAACEAIAAABAAAA=</HashCode>
+      <FileName>frmDodavanjeTransfuzije.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmPregledDonacija" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAIBAAABCAAAAGAAgAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>frmPregledDonacija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmPregledHladnjaka" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAAAEACAAAACAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>frmPregledHladnjaka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmPregledPacijenata">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAAAAAAACAAAACAAIAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>frmPregledPacijenata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmPregledStanjaKrvi" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAAAAAAACAAAACAAAAAAAAAAAIAEAAAAA=</HashCode>
+      <FileName>frmPregledStanjaKrvi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.frmPregledTransfuzija" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAABAAAACAAAACAAgAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>frmPregledTransfuzija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.Program" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BankaKrvi.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BankaKrvi.Pristup" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmDodavanjePacijenta.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

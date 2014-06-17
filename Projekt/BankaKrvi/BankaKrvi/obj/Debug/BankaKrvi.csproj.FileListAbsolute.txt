@@ -1,1 +1,19 @@
-C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\BankaKrvi.exe.config
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\bin\Debug\BankaKrvi.exe.config
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\bin\Debug\BankaKrvi.exe
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\bin\Debug\BankaKrvi.pdb
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csprojResolveAssemblyReference.cache
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledPacijenata.resources
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.Properties.Resources.resources
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csproj.GenerateResource.Cache
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.exe
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.pdb
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmBankaKrvi.resources
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjePacijenta.resources
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodajTest.resources
+c:\users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledDonacija.resources
+C:\Users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeDonacije.resources
+C:\Users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeTransfuzije.resources
+C:\Users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledStanjaKrvi.resources
+C:\Users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmHladnjak.resources
+C:\Users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledHladnjaka.resources
+C:\Users\vlazar\documents\visual studio 2012\Projects\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeDoze.resources

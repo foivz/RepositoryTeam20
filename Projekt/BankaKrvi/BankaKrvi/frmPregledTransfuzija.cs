@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace BankaKrvi
 {
-    public partial class frmMain : Form
+    public partial class frmPregledTransfuzija : Form
     {
-        public frmMain()
+        public frmPregledTransfuzija()
         {
             InitializeComponent();
+            this.CenterToParent();
         }
     }
 }
