@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2749dac8f7da4ce496bd0d725ced2721" Name="Diagram1">
+        <EntityTypeShape EntityType="bankakrviModel.bolest" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.donacija" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.hladnjak" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.krvnagrupa" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.pacijent" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.spol" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.test" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.tippacijenta" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.tipptreakcije" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.tipzaposlenika" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.transfuzija" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.ustanova" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bankakrviModel.zaposlenik" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="bankakrviModel.fk_test_bolest1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_donacija_hladnjak1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_donacija_korisnik1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_donacija_zaposlenik1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_test_donacija1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_hladnjak_krvnaGrupa1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_korisnik_krvnaGrupa1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_korisnik_spol1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_korisnik_tipKorisnika" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_transfuzija_korisnik1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_test_ustanova1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_zaposlenik_tipZaposlenika1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_transfuzija_ustanova1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.fk_zaposlenik_ustanova1" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.transfuzija_has_donacija" ManuallyRouted="false" />
+        <AssociationConnector Association="bankakrviModel.transfuzija_has_tipptreakcije" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

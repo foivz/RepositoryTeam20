@@ -26,9 +26,25 @@ namespace BankaKrvi
             this.Show();
         }
 
+        private void PrikaziPacijente()
+        {
+            BindingList<pacijent> listaPacijenata = null;
+            using (var db = new bankakrviEntities())
+            {
+                listaPacijenata = new BindingList<pacijent>(db.pacijent.ToList());
+            }
+            pacijentBindingSource.DataSource = listaPacijenata;
+        }
+
+
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmPregledPacijenata_Load(object sender, EventArgs e)
+        {
+            PrikaziPacijente();
         }
     }
 }

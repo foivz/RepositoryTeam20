@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bankakrviModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="bankakrviModelStoreContainer">
+          <EntitySet Name="bolest" EntityType="bankakrviModel.Store.bolest" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="donacija" EntityType="bankakrviModel.Store.donacija" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="hladnjak" EntityType="bankakrviModel.Store.hladnjak" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="krvnagrupa" EntityType="bankakrviModel.Store.krvnagrupa" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="pacijent" EntityType="bankakrviModel.Store.pacijent" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="spol" EntityType="bankakrviModel.Store.spol" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="test" EntityType="bankakrviModel.Store.test" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="tippacijenta" EntityType="bankakrviModel.Store.tippacijenta" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="tipptreakcije" EntityType="bankakrviModel.Store.tipptreakcije" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="tipzaposlenika" EntityType="bankakrviModel.Store.tipzaposlenika" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="transfuzija" EntityType="bankakrviModel.Store.transfuzija" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="transfuzija_has_donacija" EntityType="bankakrviModel.Store.transfuzija_has_donacija" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="transfuzija_has_tipptreakcije" EntityType="bankakrviModel.Store.transfuzija_has_tipptreakcije" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="ustanova" EntityType="bankakrviModel.Store.ustanova" store:Type="Tables" Schema="bankakrvi" />
+          <EntitySet Name="zaposlenik" EntityType="bankakrviModel.Store.zaposlenik" store:Type="Tables" Schema="bankakrvi" />
+          <AssociationSet Name="fk_donacija_hladnjak1" Association="bankakrviModel.Store.fk_donacija_hladnjak1">
+            <End Role="hladnjak" EntitySet="hladnjak" />
+            <End Role="donacija" EntitySet="donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_donacija_korisnik1" Association="bankakrviModel.Store.fk_donacija_korisnik1">
+            <End Role="pacijent" EntitySet="pacijent" />
+            <End Role="donacija" EntitySet="donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_donacija_zaposlenik1" Association="bankakrviModel.Store.fk_donacija_zaposlenik1">
+            <End Role="zaposlenik" EntitySet="zaposlenik" />
+            <End Role="donacija" EntitySet="donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hladnjak_krvnaGrupa1" Association="bankakrviModel.Store.fk_hladnjak_krvnaGrupa1">
+            <End Role="krvnagrupa" EntitySet="krvnagrupa" />
+            <End Role="hladnjak" EntitySet="hladnjak" />
+          </AssociationSet>
+          <AssociationSet Name="fk_korisnik_krvnaGrupa1" Association="bankakrviModel.Store.fk_korisnik_krvnaGrupa1">
+            <End Role="krvnagrupa" EntitySet="krvnagrupa" />
+            <End Role="pacijent" EntitySet="pacijent" />
+          </AssociationSet>
+          <AssociationSet Name="fk_korisnik_spol1" Association="bankakrviModel.Store.fk_korisnik_spol1">
+            <End Role="spol" EntitySet="spol" />
+            <End Role="pacijent" EntitySet="pacijent" />
+          </AssociationSet>
+          <AssociationSet Name="fk_korisnik_tipKorisnika" Association="bankakrviModel.Store.fk_korisnik_tipKorisnika">
+            <End Role="tippacijenta" EntitySet="tippacijenta" />
+            <End Role="pacijent" EntitySet="pacijent" />
+          </AssociationSet>
+          <AssociationSet Name="fk_test_bolest1" Association="bankakrviModel.Store.fk_test_bolest1">
+            <End Role="bolest" EntitySet="bolest" />
+            <End Role="test" EntitySet="test" />
+          </AssociationSet>
+          <AssociationSet Name="fk_test_donacija1" Association="bankakrviModel.Store.fk_test_donacija1">
+            <End Role="donacija" EntitySet="donacija" />
+            <End Role="test" EntitySet="test" />
+          </AssociationSet>
+          <AssociationSet Name="fk_test_ustanova1" Association="bankakrviModel.Store.fk_test_ustanova1">
+            <End Role="ustanova" EntitySet="ustanova" />
+            <End Role="test" EntitySet="test" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_has_donacija_donacija1" Association="bankakrviModel.Store.fk_transfuzija_has_donacija_donacija1">
+            <End Role="donacija" EntitySet="donacija" />
+            <End Role="transfuzija_has_donacija" EntitySet="transfuzija_has_donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_has_donacija_transfuzija1" Association="bankakrviModel.Store.fk_transfuzija_has_donacija_transfuzija1">
+            <End Role="transfuzija" EntitySet="transfuzija" />
+            <End Role="transfuzija_has_donacija" EntitySet="transfuzija_has_donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_has_tipPtReakcije_tipPtReakcije1" Association="bankakrviModel.Store.fk_transfuzija_has_tipPtReakcije_tipPtReakcije1">
+            <End Role="tipptreakcije" EntitySet="tipptreakcije" />
+            <End Role="transfuzija_has_tipptreakcije" EntitySet="transfuzija_has_tipptreakcije" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_has_tipPtReakcije_transfuzija1" Association="bankakrviModel.Store.fk_transfuzija_has_tipPtReakcije_transfuzija1">
+            <End Role="transfuzija" EntitySet="transfuzija" />
+            <End Role="transfuzija_has_tipptreakcije" EntitySet="transfuzija_has_tipptreakcije" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_korisnik1" Association="bankakrviModel.Store.fk_transfuzija_korisnik1">
+            <End Role="pacijent" EntitySet="pacijent" />
+            <End Role="transfuzija" EntitySet="transfuzija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_ustanova1" Association="bankakrviModel.Store.fk_transfuzija_ustanova1">
+            <End Role="ustanova" EntitySet="ustanova" />
+            <End Role="transfuzija" EntitySet="transfuzija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_zaposlenik_tipZaposlenika1" Association="bankakrviModel.Store.fk_zaposlenik_tipZaposlenika1">
+            <End Role="tipzaposlenika" EntitySet="tipzaposlenika" />
+            <End Role="zaposlenik" EntitySet="zaposlenik" />
+          </AssociationSet>
+          <AssociationSet Name="fk_zaposlenik_ustanova1" Association="bankakrviModel.Store.fk_zaposlenik_ustanova1">
+            <End Role="ustanova" EntitySet="ustanova" />
+            <End Role="zaposlenik" EntitySet="zaposlenik" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="bolest">
+          <Key>
+            <PropertyRef Name="bolestID" />
+          </Key>
+          <Property Name="bolestID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="donacija">
+          <Key>
+            <PropertyRef Name="donacijaID" />
+          </Key>
+          <Property Name="donacijaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="vrijeme" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="napomena" Type="text" />
+          <Property Name="kolicina" Type="int" />
+          <Property Name="donacija_pacijentID" Type="int" Nullable="false" />
+          <Property Name="donacija_hladnjakID" Type="int" Nullable="false" />
+          <Property Name="donacija_zaposlenikID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hladnjak">
+          <Key>
+            <PropertyRef Name="hladnjakID" />
+          </Key>
+          <Property Name="hladnjakID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+          <Property Name="pun" Type="bool" />
+          <Property Name="hladnjak_krvnaGrupaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="krvnagrupa">
+          <Key>
+            <PropertyRef Name="krvnaGrupaID" />
+          </Key>
+          <Property Name="krvnaGrupaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="pacijent">
+          <Key>
+            <PropertyRef Name="pacijentID" />
+          </Key>
+          <Property Name="pacijentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OIB" Type="char" MaxLength="11" />
+          <Property Name="ime" Type="varchar" MaxLength="45" />
+          <Property Name="prezime" Type="varchar" MaxLength="45" />
+          <Property Name="adresa" Type="varchar" MaxLength="45" />
+          <Property Name="brojPoliceOsiguranja" Type="varchar" MaxLength="45" />
+          <Property Name="telefon" Type="varchar" MaxLength="45" />
+          <Property Name="email" Type="varchar" MaxLength="45" />
+          <Property Name="tezina" Type="varchar" MaxLength="45" />
+          <Property Name="datum_rodenja" Type="date" />
+          <Property Name="pacijent_krvnaGrupaID" Type="int" Nullable="false" />
+          <Property Name="pacijent_tipPacijentaID" Type="int" Nullable="false" />
+          <Property Name="pacijent_spolID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spol">
+          <Key>
+            <PropertyRef Name="spolID" />
+          </Key>
+          <Property Name="spolID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="testID" />
+          </Key>
+          <Property Name="testID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="odobren" Type="bool" Nullable="false" />
+          <Property Name="vrijeme" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="test_ustanovaID" Type="int" Nullable="false" />
+          <Property Name="test_bolestID" Type="int" Nullable="false" />
+          <Property Name="test_donacijaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tippacijenta">
+          <Key>
+            <PropertyRef Name="tipKorisnikaID" />
+          </Key>
+          <Property Name="tipKorisnikaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="tipptreakcije">
+          <Key>
+            <PropertyRef Name="tipPtReakcijeID" />
+          </Key>
+          <Property Name="tipPtReakcijeID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="tipzaposlenika">
+          <Key>
+            <PropertyRef Name="tipZaposlenikaID" />
+          </Key>
+          <Property Name="tipZaposlenikaID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="transfuzija">
+          <Key>
+            <PropertyRef Name="transfuzijaID" />
+          </Key>
+          <Property Name="transfuzijaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="povjest_bolesti" Type="text" />
+          <Property Name="kolicina" Type="int" />
+          <Property Name="datum" Type="timestamp" StoreGeneratedPattern="Identity" />
+          <Property Name="transfuzija_pacijentID" Type="int" Nullable="false" />
+          <Property Name="transfuzija_ustanovaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transfuzija_has_donacija">
+          <Key>
+            <PropertyRef Name="transfuzija_transfuzijaID" />
+            <PropertyRef Name="donacija_donacijaID" />
+          </Key>
+          <Property Name="transfuzija_transfuzijaID" Type="int" Nullable="false" />
+          <Property Name="donacija_donacijaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transfuzija_has_tipptreakcije">
+          <Key>
+            <PropertyRef Name="transfuzija_transfuzijaID" />
+            <PropertyRef Name="tipPtReakcije_tipPtReakcijeID" />
+          </Key>
+          <Property Name="transfuzija_transfuzijaID" Type="int" Nullable="false" />
+          <Property Name="tipPtReakcije_tipPtReakcijeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ustanova">
+          <Key>
+            <PropertyRef Name="ustanovaID" />
+          </Key>
+          <Property Name="ustanovaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" MaxLength="45" />
+          <Property Name="adresa" Type="varchar" MaxLength="45" />
+          <Property Name="email" Type="varchar" MaxLength="45" />
+          <Property Name="telefon" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="zaposlenik">
+          <Key>
+            <PropertyRef Name="zaposlenikID" />
+          </Key>
+          <Property Name="zaposlenikID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="varchar" MaxLength="45" />
+          <Property Name="prezime" Type="varchar" MaxLength="45" />
+          <Property Name="korisnickoIme" Type="varchar" MaxLength="45" />
+          <Property Name="lozinka" Type="varchar" MaxLength="45" />
+          <Property Name="email" Type="varchar" MaxLength="45" />
+          <Property Name="telefon" Type="varchar" MaxLength="45" />
+          <Property Name="zaposlenik_tipZaposlenikaID" Type="int" Nullable="false" />
+          <Property Name="zaposlenik_ustanovaID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_donacija_hladnjak1">
+          <End Role="hladnjak" Type="bankakrviModel.Store.hladnjak" Multiplicity="1" />
+          <End Role="donacija" Type="bankakrviModel.Store.donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hladnjak">
+              <PropertyRef Name="hladnjakID" />
+            </Principal>
+            <Dependent Role="donacija">
+              <PropertyRef Name="donacija_hladnjakID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_donacija_korisnik1">
+          <End Role="pacijent" Type="bankakrviModel.Store.pacijent" Multiplicity="1" />
+          <End Role="donacija" Type="bankakrviModel.Store.donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pacijent">
+              <PropertyRef Name="pacijentID" />
+            </Principal>
+            <Dependent Role="donacija">
+              <PropertyRef Name="donacija_pacijentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_donacija_zaposlenik1">
+          <End Role="zaposlenik" Type="bankakrviModel.Store.zaposlenik" Multiplicity="1" />
+          <End Role="donacija" Type="bankakrviModel.Store.donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zaposlenik">
+              <PropertyRef Name="zaposlenikID" />
+            </Principal>
+            <Dependent Role="donacija">
+              <PropertyRef Name="donacija_zaposlenikID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hladnjak_krvnaGrupa1">
+          <End Role="krvnagrupa" Type="bankakrviModel.Store.krvnagrupa" Multiplicity="1" />
+          <End Role="hladnjak" Type="bankakrviModel.Store.hladnjak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="krvnagrupa">
+              <PropertyRef Name="krvnaGrupaID" />
+            </Principal>
+            <Dependent Role="hladnjak">
+              <PropertyRef Name="hladnjak_krvnaGrupaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_korisnik_krvnaGrupa1">
+          <End Role="krvnagrupa" Type="bankakrviModel.Store.krvnagrupa" Multiplicity="1" />
+          <End Role="pacijent" Type="bankakrviModel.Store.pacijent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="krvnagrupa">
+              <PropertyRef Name="krvnaGrupaID" />
+            </Principal>
+            <Dependent Role="pacijent">
+              <PropertyRef Name="pacijent_krvnaGrupaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_korisnik_spol1">
+          <End Role="spol" Type="bankakrviModel.Store.spol" Multiplicity="1" />
+          <End Role="pacijent" Type="bankakrviModel.Store.pacijent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="spol">
+              <PropertyRef Name="spolID" />
+            </Principal>
+            <Dependent Role="pacijent">
+              <PropertyRef Name="pacijent_spolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_korisnik_tipKorisnika">
+          <End Role="tippacijenta" Type="bankakrviModel.Store.tippacijenta" Multiplicity="1" />
+          <End Role="pacijent" Type="bankakrviModel.Store.pacijent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tippacijenta">
+              <PropertyRef Name="tipKorisnikaID" />
+            </Principal>
+            <Dependent Role="pacijent">
+              <PropertyRef Name="pacijent_tipPacijentaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_test_bolest1">
+          <End Role="bolest" Type="bankakrviModel.Store.bolest" Multiplicity="1" />
+          <End Role="test" Type="bankakrviModel.Store.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bolest">
+              <PropertyRef Name="bolestID" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="test_bolestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_test_donacija1">
+          <End Role="donacija" Type="bankakrviModel.Store.donacija" Multiplicity="1" />
+          <End Role="test" Type="bankakrviModel.Store.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="donacija">
+              <PropertyRef Name="donacijaID" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="test_donacijaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_test_ustanova1">
+          <End Role="ustanova" Type="bankakrviModel.Store.ustanova" Multiplicity="1" />
+          <End Role="test" Type="bankakrviModel.Store.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ustanova">
+              <PropertyRef Name="ustanovaID" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="test_ustanovaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_has_donacija_donacija1">
+          <End Role="donacija" Type="bankakrviModel.Store.donacija" Multiplicity="1" />
+          <End Role="transfuzija_has_donacija" Type="bankakrviModel.Store.transfuzija_has_donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="donacija">
+              <PropertyRef Name="donacijaID" />
+            </Principal>
+            <Dependent Role="transfuzija_has_donacija">
+              <PropertyRef Name="donacija_donacijaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_has_donacija_transfuzija1">
+          <End Role="transfuzija" Type="bankakrviModel.Store.transfuzija" Multiplicity="1" />
+          <End Role="transfuzija_has_donacija" Type="bankakrviModel.Store.transfuzija_has_donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="transfuzija">
+              <PropertyRef Name="transfuzijaID" />
+            </Principal>
+            <Dependent Role="transfuzija_has_donacija">
+              <PropertyRef Name="transfuzija_transfuzijaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_has_tipPtReakcije_tipPtReakcije1">
+          <End Role="tipptreakcije" Type="bankakrviModel.Store.tipptreakcije" Multiplicity="1" />
+          <End Role="transfuzija_has_tipptreakcije" Type="bankakrviModel.Store.transfuzija_has_tipptreakcije" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipptreakcije">
+              <PropertyRef Name="tipPtReakcijeID" />
+            </Principal>
+            <Dependent Role="transfuzija_has_tipptreakcije">
+              <PropertyRef Name="tipPtReakcije_tipPtReakcijeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_has_tipPtReakcije_transfuzija1">
+          <End Role="transfuzija" Type="bankakrviModel.Store.transfuzija" Multiplicity="1" />
+          <End Role="transfuzija_has_tipptreakcije" Type="bankakrviModel.Store.transfuzija_has_tipptreakcije" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="transfuzija">
+              <PropertyRef Name="transfuzijaID" />
+            </Principal>
+            <Dependent Role="transfuzija_has_tipptreakcije">
+              <PropertyRef Name="transfuzija_transfuzijaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_korisnik1">
+          <End Role="pacijent" Type="bankakrviModel.Store.pacijent" Multiplicity="1" />
+          <End Role="transfuzija" Type="bankakrviModel.Store.transfuzija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pacijent">
+              <PropertyRef Name="pacijentID" />
+            </Principal>
+            <Dependent Role="transfuzija">
+              <PropertyRef Name="transfuzija_pacijentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_ustanova1">
+          <End Role="ustanova" Type="bankakrviModel.Store.ustanova" Multiplicity="1" />
+          <End Role="transfuzija" Type="bankakrviModel.Store.transfuzija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ustanova">
+              <PropertyRef Name="ustanovaID" />
+            </Principal>
+            <Dependent Role="transfuzija">
+              <PropertyRef Name="transfuzija_ustanovaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_zaposlenik_tipZaposlenika1">
+          <End Role="tipzaposlenika" Type="bankakrviModel.Store.tipzaposlenika" Multiplicity="1" />
+          <End Role="zaposlenik" Type="bankakrviModel.Store.zaposlenik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipzaposlenika">
+              <PropertyRef Name="tipZaposlenikaID" />
+            </Principal>
+            <Dependent Role="zaposlenik">
+              <PropertyRef Name="zaposlenik_tipZaposlenikaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_zaposlenik_ustanova1">
+          <End Role="ustanova" Type="bankakrviModel.Store.ustanova" Multiplicity="1" />
+          <End Role="zaposlenik" Type="bankakrviModel.Store.zaposlenik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ustanova">
+              <PropertyRef Name="ustanovaID" />
+            </Principal>
+            <Dependent Role="zaposlenik">
+              <PropertyRef Name="zaposlenik_ustanovaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bankakrviModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="bankakrviEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="bolest" EntityType="bankakrviModel.bolest" />
+          <EntitySet Name="donacija" EntityType="bankakrviModel.donacija" />
+          <EntitySet Name="hladnjak" EntityType="bankakrviModel.hladnjak" />
+          <EntitySet Name="krvnagrupa" EntityType="bankakrviModel.krvnagrupa" />
+          <EntitySet Name="pacijent" EntityType="bankakrviModel.pacijent" />
+          <EntitySet Name="spol" EntityType="bankakrviModel.spol" />
+          <EntitySet Name="test" EntityType="bankakrviModel.test" />
+          <EntitySet Name="tippacijenta" EntityType="bankakrviModel.tippacijenta" />
+          <EntitySet Name="tipptreakcije" EntityType="bankakrviModel.tipptreakcije" />
+          <EntitySet Name="tipzaposlenika" EntityType="bankakrviModel.tipzaposlenika" />
+          <EntitySet Name="transfuzija" EntityType="bankakrviModel.transfuzija" />
+          <EntitySet Name="ustanova" EntityType="bankakrviModel.ustanova" />
+          <EntitySet Name="zaposlenik" EntityType="bankakrviModel.zaposlenik" />
+          <AssociationSet Name="fk_test_bolest1" Association="bankakrviModel.fk_test_bolest1">
+            <End Role="bolest" EntitySet="bolest" />
+            <End Role="test" EntitySet="test" />
+          </AssociationSet>
+          <AssociationSet Name="fk_donacija_hladnjak1" Association="bankakrviModel.fk_donacija_hladnjak1">
+            <End Role="hladnjak" EntitySet="hladnjak" />
+            <End Role="donacija" EntitySet="donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_donacija_korisnik1" Association="bankakrviModel.fk_donacija_korisnik1">
+            <End Role="pacijent" EntitySet="pacijent" />
+            <End Role="donacija" EntitySet="donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_donacija_zaposlenik1" Association="bankakrviModel.fk_donacija_zaposlenik1">
+            <End Role="zaposlenik" EntitySet="zaposlenik" />
+            <End Role="donacija" EntitySet="donacija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_test_donacija1" Association="bankakrviModel.fk_test_donacija1">
+            <End Role="donacija" EntitySet="donacija" />
+            <End Role="test" EntitySet="test" />
+          </AssociationSet>
+          <AssociationSet Name="fk_hladnjak_krvnaGrupa1" Association="bankakrviModel.fk_hladnjak_krvnaGrupa1">
+            <End Role="krvnagrupa" EntitySet="krvnagrupa" />
+            <End Role="hladnjak" EntitySet="hladnjak" />
+          </AssociationSet>
+          <AssociationSet Name="fk_korisnik_krvnaGrupa1" Association="bankakrviModel.fk_korisnik_krvnaGrupa1">
+            <End Role="krvnagrupa" EntitySet="krvnagrupa" />
+            <End Role="pacijent" EntitySet="pacijent" />
+          </AssociationSet>
+          <AssociationSet Name="fk_korisnik_spol1" Association="bankakrviModel.fk_korisnik_spol1">
+            <End Role="spol" EntitySet="spol" />
+            <End Role="pacijent" EntitySet="pacijent" />
+          </AssociationSet>
+          <AssociationSet Name="fk_korisnik_tipKorisnika" Association="bankakrviModel.fk_korisnik_tipKorisnika">
+            <End Role="tippacijenta" EntitySet="tippacijenta" />
+            <End Role="pacijent" EntitySet="pacijent" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_korisnik1" Association="bankakrviModel.fk_transfuzija_korisnik1">
+            <End Role="pacijent" EntitySet="pacijent" />
+            <End Role="transfuzija" EntitySet="transfuzija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_test_ustanova1" Association="bankakrviModel.fk_test_ustanova1">
+            <End Role="ustanova" EntitySet="ustanova" />
+            <End Role="test" EntitySet="test" />
+          </AssociationSet>
+          <AssociationSet Name="fk_zaposlenik_tipZaposlenika1" Association="bankakrviModel.fk_zaposlenik_tipZaposlenika1">
+            <End Role="tipzaposlenika" EntitySet="tipzaposlenika" />
+            <End Role="zaposlenik" EntitySet="zaposlenik" />
+          </AssociationSet>
+          <AssociationSet Name="fk_transfuzija_ustanova1" Association="bankakrviModel.fk_transfuzija_ustanova1">
+            <End Role="ustanova" EntitySet="ustanova" />
+            <End Role="transfuzija" EntitySet="transfuzija" />
+          </AssociationSet>
+          <AssociationSet Name="fk_zaposlenik_ustanova1" Association="bankakrviModel.fk_zaposlenik_ustanova1">
+            <End Role="ustanova" EntitySet="ustanova" />
+            <End Role="zaposlenik" EntitySet="zaposlenik" />
+          </AssociationSet>
+          <AssociationSet Name="transfuzija_has_donacija" Association="bankakrviModel.transfuzija_has_donacija">
+            <End Role="donacija" EntitySet="donacija" />
+            <End Role="transfuzija" EntitySet="transfuzija" />
+          </AssociationSet>
+          <AssociationSet Name="transfuzija_has_tipptreakcije" Association="bankakrviModel.transfuzija_has_tipptreakcije">
+            <End Role="tipptreakcije" EntitySet="tipptreakcije" />
+            <End Role="transfuzija" EntitySet="transfuzija" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="bolest">
+          <Key>
+            <PropertyRef Name="bolestID" />
+          </Key>
+          <Property Name="bolestID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="test" Relationship="bankakrviModel.fk_test_bolest1" FromRole="bolest" ToRole="test" />
+        </EntityType>
+        <EntityType Name="donacija">
+          <Key>
+            <PropertyRef Name="donacijaID" />
+          </Key>
+          <Property Name="donacijaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="vrijeme" Type="DateTime" Nullable="false" p1:StoreGeneratedPattern="Identity" Precision="0" />
+          <Property Name="napomena" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="kolicina" Type="Int32" />
+          <Property Name="donacija_pacijentID" Type="Int32" Nullable="false" />
+          <Property Name="donacija_hladnjakID" Type="Int32" Nullable="false" />
+          <Property Name="donacija_zaposlenikID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="hladnjak" Relationship="bankakrviModel.fk_donacija_hladnjak1" FromRole="donacija" ToRole="hladnjak" />
+          <NavigationProperty Name="pacijent" Relationship="bankakrviModel.fk_donacija_korisnik1" FromRole="donacija" ToRole="pacijent" />
+          <NavigationProperty Name="zaposlenik" Relationship="bankakrviModel.fk_donacija_zaposlenik1" FromRole="donacija" ToRole="zaposlenik" />
+          <NavigationProperty Name="test" Relationship="bankakrviModel.fk_test_donacija1" FromRole="donacija" ToRole="test" />
+          <NavigationProperty Name="transfuzija" Relationship="bankakrviModel.transfuzija_has_donacija" FromRole="donacija" ToRole="transfuzija" />
+        </EntityType>
+        <EntityType Name="hladnjak">
+          <Key>
+            <PropertyRef Name="hladnjakID" />
+          </Key>
+          <Property Name="hladnjakID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="pun" Type="Boolean" />
+          <Property Name="hladnjak_krvnaGrupaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="donacija" Relationship="bankakrviModel.fk_donacija_hladnjak1" FromRole="hladnjak" ToRole="donacija" />
+          <NavigationProperty Name="krvnagrupa" Relationship="bankakrviModel.fk_hladnjak_krvnaGrupa1" FromRole="hladnjak" ToRole="krvnagrupa" />
+        </EntityType>
+        <EntityType Name="krvnagrupa">
+          <Key>
+            <PropertyRef Name="krvnaGrupaID" />
+          </Key>
+          <Property Name="krvnaGrupaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="hladnjak" Relationship="bankakrviModel.fk_hladnjak_krvnaGrupa1" FromRole="krvnagrupa" ToRole="hladnjak" />
+          <NavigationProperty Name="pacijent" Relationship="bankakrviModel.fk_korisnik_krvnaGrupa1" FromRole="krvnagrupa" ToRole="pacijent" />
+        </EntityType>
+        <EntityType Name="pacijent">
+          <Key>
+            <PropertyRef Name="pacijentID" />
+          </Key>
+          <Property Name="pacijentID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OIB" Type="String" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="ime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="prezime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="adresa" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="brojPoliceOsiguranja" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="telefon" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="tezina" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="datum_rodenja" Type="DateTime" Precision="0" />
+          <Property Name="pacijent_krvnaGrupaID" Type="Int32" Nullable="false" />
+          <Property Name="pacijent_tipPacijentaID" Type="Int32" Nullable="false" />
+          <Property Name="pacijent_spolID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="donacija" Relationship="bankakrviModel.fk_donacija_korisnik1" FromRole="pacijent" ToRole="donacija" />
+          <NavigationProperty Name="krvnagrupa" Relationship="bankakrviModel.fk_korisnik_krvnaGrupa1" FromRole="pacijent" ToRole="krvnagrupa" />
+          <NavigationProperty Name="spol" Relationship="bankakrviModel.fk_korisnik_spol1" FromRole="pacijent" ToRole="spol" />
+          <NavigationProperty Name="tippacijenta" Relationship="bankakrviModel.fk_korisnik_tipKorisnika" FromRole="pacijent" ToRole="tippacijenta" />
+          <NavigationProperty Name="transfuzija" Relationship="bankakrviModel.fk_transfuzija_korisnik1" FromRole="pacijent" ToRole="transfuzija" />
+        </EntityType>
+        <EntityType Name="spol">
+          <Key>
+            <PropertyRef Name="spolID" />
+          </Key>
+          <Property Name="spolID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="pacijent" Relationship="bankakrviModel.fk_korisnik_spol1" FromRole="spol" ToRole="pacijent" />
+        </EntityType>
+        <EntityType Name="test">
+          <Key>
+            <PropertyRef Name="testID" />
+          </Key>
+          <Property Name="testID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="odobren" Type="Boolean" Nullable="false" />
+          <Property Name="vrijeme" Type="DateTime" Nullable="false" p1:StoreGeneratedPattern="Identity" Precision="0" />
+          <Property Name="test_ustanovaID" Type="Int32" Nullable="false" />
+          <Property Name="test_bolestID" Type="Int32" Nullable="false" />
+          <Property Name="test_donacijaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="bolest" Relationship="bankakrviModel.fk_test_bolest1" FromRole="test" ToRole="bolest" />
+          <NavigationProperty Name="donacija" Relationship="bankakrviModel.fk_test_donacija1" FromRole="test" ToRole="donacija" />
+          <NavigationProperty Name="ustanova" Relationship="bankakrviModel.fk_test_ustanova1" FromRole="test" ToRole="ustanova" />
+        </EntityType>
+        <EntityType Name="tippacijenta">
+          <Key>
+            <PropertyRef Name="tipKorisnikaID" />
+          </Key>
+          <Property Name="tipKorisnikaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="pacijent" Relationship="bankakrviModel.fk_korisnik_tipKorisnika" FromRole="tippacijenta" ToRole="pacijent" />
+        </EntityType>
+        <EntityType Name="tipptreakcije">
+          <Key>
+            <PropertyRef Name="tipPtReakcijeID" />
+          </Key>
+          <Property Name="tipPtReakcijeID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="transfuzija" Relationship="bankakrviModel.transfuzija_has_tipptreakcije" FromRole="tipptreakcije" ToRole="transfuzija" />
+        </EntityType>
+        <EntityType Name="tipzaposlenika">
+          <Key>
+            <PropertyRef Name="tipZaposlenikaID" />
+          </Key>
+          <Property Name="tipZaposlenikaID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="zaposlenik" Relationship="bankakrviModel.fk_zaposlenik_tipZaposlenika1" FromRole="tipzaposlenika" ToRole="zaposlenik" />
+        </EntityType>
+        <EntityType Name="transfuzija">
+          <Key>
+            <PropertyRef Name="transfuzijaID" />
+          </Key>
+          <Property Name="transfuzijaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="povjest_bolesti" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="kolicina" Type="Int32" />
+          <Property Name="datum" Type="DateTime" p1:StoreGeneratedPattern="Identity" Precision="0" />
+          <Property Name="transfuzija_pacijentID" Type="Int32" Nullable="false" />
+          <Property Name="transfuzija_ustanovaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="pacijent" Relationship="bankakrviModel.fk_transfuzija_korisnik1" FromRole="transfuzija" ToRole="pacijent" />
+          <NavigationProperty Name="ustanova" Relationship="bankakrviModel.fk_transfuzija_ustanova1" FromRole="transfuzija" ToRole="ustanova" />
+          <NavigationProperty Name="donacija" Relationship="bankakrviModel.transfuzija_has_donacija" FromRole="transfuzija" ToRole="donacija" />
+          <NavigationProperty Name="tipptreakcije" Relationship="bankakrviModel.transfuzija_has_tipptreakcije" FromRole="transfuzija" ToRole="tipptreakcije" />
+        </EntityType>
+        <EntityType Name="ustanova">
+          <Key>
+            <PropertyRef Name="ustanovaID" />
+          </Key>
+          <Property Name="ustanovaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="adresa" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="telefon" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="test" Relationship="bankakrviModel.fk_test_ustanova1" FromRole="ustanova" ToRole="test" />
+          <NavigationProperty Name="transfuzija" Relationship="bankakrviModel.fk_transfuzija_ustanova1" FromRole="ustanova" ToRole="transfuzija" />
+          <NavigationProperty Name="zaposlenik" Relationship="bankakrviModel.fk_zaposlenik_ustanova1" FromRole="ustanova" ToRole="zaposlenik" />
+        </EntityType>
+        <EntityType Name="zaposlenik">
+          <Key>
+            <PropertyRef Name="zaposlenikID" />
+          </Key>
+          <Property Name="zaposlenikID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="prezime" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="korisnickoIme" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="lozinka" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="telefon" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="zaposlenik_tipZaposlenikaID" Type="Int32" Nullable="false" />
+          <Property Name="zaposlenik_ustanovaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="donacija" Relationship="bankakrviModel.fk_donacija_zaposlenik1" FromRole="zaposlenik" ToRole="donacija" />
+          <NavigationProperty Name="tipzaposlenika" Relationship="bankakrviModel.fk_zaposlenik_tipZaposlenika1" FromRole="zaposlenik" ToRole="tipzaposlenika" />
+          <NavigationProperty Name="ustanova" Relationship="bankakrviModel.fk_zaposlenik_ustanova1" FromRole="zaposlenik" ToRole="ustanova" />
+        </EntityType>
+        <Association Name="fk_test_bolest1">
+          <End Role="bolest" Type="bankakrviModel.bolest" Multiplicity="1" />
+          <End Role="test" Type="bankakrviModel.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bolest">
+              <PropertyRef Name="bolestID" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="test_bolestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_donacija_hladnjak1">
+          <End Role="hladnjak" Type="bankakrviModel.hladnjak" Multiplicity="1" />
+          <End Role="donacija" Type="bankakrviModel.donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hladnjak">
+              <PropertyRef Name="hladnjakID" />
+            </Principal>
+            <Dependent Role="donacija">
+              <PropertyRef Name="donacija_hladnjakID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_donacija_korisnik1">
+          <End Role="pacijent" Type="bankakrviModel.pacijent" Multiplicity="1" />
+          <End Role="donacija" Type="bankakrviModel.donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pacijent">
+              <PropertyRef Name="pacijentID" />
+            </Principal>
+            <Dependent Role="donacija">
+              <PropertyRef Name="donacija_pacijentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_donacija_zaposlenik1">
+          <End Role="zaposlenik" Type="bankakrviModel.zaposlenik" Multiplicity="1" />
+          <End Role="donacija" Type="bankakrviModel.donacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zaposlenik">
+              <PropertyRef Name="zaposlenikID" />
+            </Principal>
+            <Dependent Role="donacija">
+              <PropertyRef Name="donacija_zaposlenikID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_test_donacija1">
+          <End Role="donacija" Type="bankakrviModel.donacija" Multiplicity="1" />
+          <End Role="test" Type="bankakrviModel.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="donacija">
+              <PropertyRef Name="donacijaID" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="test_donacijaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_hladnjak_krvnaGrupa1">
+          <End Role="krvnagrupa" Type="bankakrviModel.krvnagrupa" Multiplicity="1" />
+          <End Role="hladnjak" Type="bankakrviModel.hladnjak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="krvnagrupa">
+              <PropertyRef Name="krvnaGrupaID" />
+            </Principal>
+            <Dependent Role="hladnjak">
+              <PropertyRef Name="hladnjak_krvnaGrupaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_korisnik_krvnaGrupa1">
+          <End Role="krvnagrupa" Type="bankakrviModel.krvnagrupa" Multiplicity="1" />
+          <End Role="pacijent" Type="bankakrviModel.pacijent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="krvnagrupa">
+              <PropertyRef Name="krvnaGrupaID" />
+            </Principal>
+            <Dependent Role="pacijent">
+              <PropertyRef Name="pacijent_krvnaGrupaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_korisnik_spol1">
+          <End Role="spol" Type="bankakrviModel.spol" Multiplicity="1" />
+          <End Role="pacijent" Type="bankakrviModel.pacijent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="spol">
+              <PropertyRef Name="spolID" />
+            </Principal>
+            <Dependent Role="pacijent">
+              <PropertyRef Name="pacijent_spolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_korisnik_tipKorisnika">
+          <End Role="tippacijenta" Type="bankakrviModel.tippacijenta" Multiplicity="1" />
+          <End Role="pacijent" Type="bankakrviModel.pacijent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tippacijenta">
+              <PropertyRef Name="tipKorisnikaID" />
+            </Principal>
+            <Dependent Role="pacijent">
+              <PropertyRef Name="pacijent_tipPacijentaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_korisnik1">
+          <End Role="pacijent" Type="bankakrviModel.pacijent" Multiplicity="1" />
+          <End Role="transfuzija" Type="bankakrviModel.transfuzija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pacijent">
+              <PropertyRef Name="pacijentID" />
+            </Principal>
+            <Dependent Role="transfuzija">
+              <PropertyRef Name="transfuzija_pacijentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_test_ustanova1">
+          <End Role="ustanova" Type="bankakrviModel.ustanova" Multiplicity="1" />
+          <End Role="test" Type="bankakrviModel.test" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ustanova">
+              <PropertyRef Name="ustanovaID" />
+            </Principal>
+            <Dependent Role="test">
+              <PropertyRef Name="test_ustanovaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_zaposlenik_tipZaposlenika1">
+          <End Role="tipzaposlenika" Type="bankakrviModel.tipzaposlenika" Multiplicity="1" />
+          <End Role="zaposlenik" Type="bankakrviModel.zaposlenik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipzaposlenika">
+              <PropertyRef Name="tipZaposlenikaID" />
+            </Principal>
+            <Dependent Role="zaposlenik">
+              <PropertyRef Name="zaposlenik_tipZaposlenikaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_transfuzija_ustanova1">
+          <End Role="ustanova" Type="bankakrviModel.ustanova" Multiplicity="1" />
+          <End Role="transfuzija" Type="bankakrviModel.transfuzija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ustanova">
+              <PropertyRef Name="ustanovaID" />
+            </Principal>
+            <Dependent Role="transfuzija">
+              <PropertyRef Name="transfuzija_ustanovaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_zaposlenik_ustanova1">
+          <End Role="ustanova" Type="bankakrviModel.ustanova" Multiplicity="1" />
+          <End Role="zaposlenik" Type="bankakrviModel.zaposlenik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ustanova">
+              <PropertyRef Name="ustanovaID" />
+            </Principal>
+            <Dependent Role="zaposlenik">
+              <PropertyRef Name="zaposlenik_ustanovaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="transfuzija_has_donacija">
+          <End Role="donacija" Type="bankakrviModel.donacija" Multiplicity="*" />
+          <End Role="transfuzija" Type="bankakrviModel.transfuzija" Multiplicity="*" />
+        </Association>
+        <Association Name="transfuzija_has_tipptreakcije">
+          <End Role="tipptreakcije" Type="bankakrviModel.tipptreakcije" Multiplicity="*" />
+          <End Role="transfuzija" Type="bankakrviModel.transfuzija" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bankakrviModelStoreContainer" CdmEntityContainer="bankakrviEntities">
+          <EntitySetMapping Name="bolest">
+            <EntityTypeMapping TypeName="bankakrviModel.bolest">
+              <MappingFragment StoreEntitySet="bolest">
+                <ScalarProperty Name="bolestID" ColumnName="bolestID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="donacija">
+            <EntityTypeMapping TypeName="bankakrviModel.donacija">
+              <MappingFragment StoreEntitySet="donacija">
+                <ScalarProperty Name="donacijaID" ColumnName="donacijaID" />
+                <ScalarProperty Name="vrijeme" ColumnName="vrijeme" />
+                <ScalarProperty Name="napomena" ColumnName="napomena" />
+                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+                <ScalarProperty Name="donacija_pacijentID" ColumnName="donacija_pacijentID" />
+                <ScalarProperty Name="donacija_hladnjakID" ColumnName="donacija_hladnjakID" />
+                <ScalarProperty Name="donacija_zaposlenikID" ColumnName="donacija_zaposlenikID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hladnjak">
+            <EntityTypeMapping TypeName="bankakrviModel.hladnjak">
+              <MappingFragment StoreEntitySet="hladnjak">
+                <ScalarProperty Name="hladnjakID" ColumnName="hladnjakID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="pun" ColumnName="pun" />
+                <ScalarProperty Name="hladnjak_krvnaGrupaID" ColumnName="hladnjak_krvnaGrupaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="krvnagrupa">
+            <EntityTypeMapping TypeName="bankakrviModel.krvnagrupa">
+              <MappingFragment StoreEntitySet="krvnagrupa">
+                <ScalarProperty Name="krvnaGrupaID" ColumnName="krvnaGrupaID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pacijent">
+            <EntityTypeMapping TypeName="bankakrviModel.pacijent">
+              <MappingFragment StoreEntitySet="pacijent">
+                <ScalarProperty Name="pacijentID" ColumnName="pacijentID" />
+                <ScalarProperty Name="OIB" ColumnName="OIB" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="brojPoliceOsiguranja" ColumnName="brojPoliceOsiguranja" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="tezina" ColumnName="tezina" />
+                <ScalarProperty Name="datum_rodenja" ColumnName="datum_rodenja" />
+                <ScalarProperty Name="pacijent_krvnaGrupaID" ColumnName="pacijent_krvnaGrupaID" />
+                <ScalarProperty Name="pacijent_tipPacijentaID" ColumnName="pacijent_tipPacijentaID" />
+                <ScalarProperty Name="pacijent_spolID" ColumnName="pacijent_spolID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spol">
+            <EntityTypeMapping TypeName="bankakrviModel.spol">
+              <MappingFragment StoreEntitySet="spol">
+                <ScalarProperty Name="spolID" ColumnName="spolID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="test">
+            <EntityTypeMapping TypeName="bankakrviModel.test">
+              <MappingFragment StoreEntitySet="test">
+                <ScalarProperty Name="testID" ColumnName="testID" />
+                <ScalarProperty Name="odobren" ColumnName="odobren" />
+                <ScalarProperty Name="vrijeme" ColumnName="vrijeme" />
+                <ScalarProperty Name="test_ustanovaID" ColumnName="test_ustanovaID" />
+                <ScalarProperty Name="test_bolestID" ColumnName="test_bolestID" />
+                <ScalarProperty Name="test_donacijaID" ColumnName="test_donacijaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tippacijenta">
+            <EntityTypeMapping TypeName="bankakrviModel.tippacijenta">
+              <MappingFragment StoreEntitySet="tippacijenta">
+                <ScalarProperty Name="tipKorisnikaID" ColumnName="tipKorisnikaID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipptreakcije">
+            <EntityTypeMapping TypeName="bankakrviModel.tipptreakcije">
+              <MappingFragment StoreEntitySet="tipptreakcije">
+                <ScalarProperty Name="tipPtReakcijeID" ColumnName="tipPtReakcijeID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipzaposlenika">
+            <EntityTypeMapping TypeName="bankakrviModel.tipzaposlenika">
+              <MappingFragment StoreEntitySet="tipzaposlenika">
+                <ScalarProperty Name="tipZaposlenikaID" ColumnName="tipZaposlenikaID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transfuzija">
+            <EntityTypeMapping TypeName="bankakrviModel.transfuzija">
+              <MappingFragment StoreEntitySet="transfuzija">
+                <ScalarProperty Name="transfuzijaID" ColumnName="transfuzijaID" />
+                <ScalarProperty Name="povjest_bolesti" ColumnName="povjest_bolesti" />
+                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="transfuzija_pacijentID" ColumnName="transfuzija_pacijentID" />
+                <ScalarProperty Name="transfuzija_ustanovaID" ColumnName="transfuzija_ustanovaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ustanova">
+            <EntityTypeMapping TypeName="bankakrviModel.ustanova">
+              <MappingFragment StoreEntitySet="ustanova">
+                <ScalarProperty Name="ustanovaID" ColumnName="ustanovaID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zaposlenik">
+            <EntityTypeMapping TypeName="bankakrviModel.zaposlenik">
+              <MappingFragment StoreEntitySet="zaposlenik">
+                <ScalarProperty Name="zaposlenikID" ColumnName="zaposlenikID" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="korisnickoIme" ColumnName="korisnickoIme" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="zaposlenik_tipZaposlenikaID" ColumnName="zaposlenik_tipZaposlenikaID" />
+                <ScalarProperty Name="zaposlenik_ustanovaID" ColumnName="zaposlenik_ustanovaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="transfuzija_has_donacija" TypeName="bankakrviModel.transfuzija_has_donacija" StoreEntitySet="transfuzija_has_donacija">
+            <EndProperty Name="donacija">
+              <ScalarProperty Name="donacijaID" ColumnName="donacija_donacijaID" />
+            </EndProperty>
+            <EndProperty Name="transfuzija">
+              <ScalarProperty Name="transfuzijaID" ColumnName="transfuzija_transfuzijaID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="transfuzija_has_tipptreakcije" TypeName="bankakrviModel.transfuzija_has_tipptreakcije" StoreEntitySet="transfuzija_has_tipptreakcije">
+            <EndProperty Name="tipptreakcije">
+              <ScalarProperty Name="tipPtReakcijeID" ColumnName="tipPtReakcije_tipPtReakcijeID" />
+            </EndProperty>
+            <EndProperty Name="transfuzija">
+              <ScalarProperty Name="transfuzijaID" ColumnName="transfuzija_transfuzijaID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

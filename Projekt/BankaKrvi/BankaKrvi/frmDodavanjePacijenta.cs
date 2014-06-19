@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,22 +34,58 @@ namespace BankaKrvi
         {
             if (pristupPacijentu == Pristup.azuriraj)
             {
-                this.Text = "Ažuriraj pacijenta";
+                this.Text = "Ažuriraj podatke pacijenta";
             }
             else if (pristupPacijentu == Pristup.kreiraj)
             {
-                this.Text = "Kreiraj pacijenta";
+                this.Text = "Dodaj novog pacijenta";
             }
         }
 
         private void frmDodavanjePacijenta_Load(object sender, EventArgs e)
         {
+            using (var db = new bankakrviEntities())
+            {
+                cboxDnpKrvnaGrupa.DataSource = db.krvnagrupa.ToList();
+                cboxDnpKrvnaGrupa.ValueMember = "krvnaGrupaID";
+                cboxDnpKrvnaGrupa.DisplayMember = "naziv";
+
+                cboxDnpSpol.DataSource = db.spol.ToList();
+                cboxDnpSpol.ValueMember = "spolID";
+                cboxDnpSpol.DisplayMember = "naziv";
+
+                cboxDnpTip.DataSource = db.tippacijenta.ToList();
+                cboxDnpTip.ValueMember = "tipkorisnikaID";
+                cboxDnpTip.DisplayMember = "naziv";
+            }
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void btnDnpDodaj_Click(object sender, EventArgs e)
         {
-
+            
+            using (var db = new bankakrviEntities()) 
+            {
+                pacijent noviPacijent = new pacijent
+                {
+                    OIB = txbDnpOIB.Text,
+                    ime = txbDnpIme.Text,
+                    prezime = txbDnpPrezime.Text,
+                    adresa = txbDnpAdresa.Text,
+                    brojPoliceOsiguranja = txbDnpPolicaOsiguranja.Text,
+                    telefon = txbDnpTelefon.Text,
+                    email = txbDnpEmail.Text,
+                    tezina = txbDnpTezina.Text,
+                    datum_rodenja = DateTime.ParseExact(dtpDnpDatumRodenja.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture), //ne radi
+                    pacijent_krvnaGrupaID = Convert.ToInt32(cboxDnpKrvnaGrupa.ValueMember),
+                    pacijent_tipPacijentaID = Convert.ToInt32(cboxDnpTip.ValueMember),
+                    pacijent_spolID = Convert.ToInt32(cboxDnpSpol.ValueMember)
+                };
+                db.pacijent.Add(noviPacijent);
+                db.SaveChanges();
+            }
+            Close();
         }
+        
     }
 }

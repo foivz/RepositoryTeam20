@@ -32,9 +32,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +52,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bankaKrviModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankaKrviModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bankaKrviModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bankaKrviModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankaKrviModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="bolest.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="donacija.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="frmBankaKrvi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +145,41 @@
     <Compile Include="frmPregledTransfuzija.Designer.cs">
       <DependentUpon>frmPregledTransfuzija.cs</DependentUpon>
     </Compile>
+    <Compile Include="hladnjak.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="krvnagrupa.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pacijent.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spol.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tippacijenta.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipptreakcije.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tipzaposlenika.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="transfuzija.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ustanova.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zaposlenik.cs">
+      <DependentUpon>bankaKrviModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmBankaKrvi.resx">
       <DependentUpon>frmBankaKrvi.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,9 +222,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="bankaKrviModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>bankaKrviModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="bankaKrviModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bankaKrviModel.edmx</DependentUpon>
+      <LastGenOutput>bankaKrviModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="bankaKrviModel.edmx.diagram">
+      <DependentUpon>bankaKrviModel.edmx</DependentUpon>
+    </None>
+    <None Include="bankaKrviModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bankaKrviModel.edmx</DependentUpon>
+      <LastGenOutput>bankaKrviModel.cs</LastGenOutput>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="ClassDiagram3.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\krvnagrupa.datasource" />
+    <None Include="Properties\DataSources\pacijent.datasource" />
+    <None Include="Properties\DataSources\spol.datasource" />
+    <None Include="Properties\DataSources\tippacijenta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -176,6 +259,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
