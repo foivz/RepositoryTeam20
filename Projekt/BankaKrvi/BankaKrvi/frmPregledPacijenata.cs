@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
 
 namespace BankaKrvi
 {
     public partial class frmPregledPacijenata : Form
     {
+        bankakrviEntities ctx = new bankakrviEntities();
+
         public frmPregledPacijenata()
         {
             InitializeComponent();
@@ -20,20 +24,29 @@ namespace BankaKrvi
 
         private void btnAzurirajPacijenta_Click(object sender, EventArgs e)
         {
-            frmDodavanjePacijenta DodavanjePacijenta = new frmDodavanjePacijenta(Pristup.azuriraj);
-            this.Hide();
-            DodavanjePacijenta.ShowDialog();
-            this.Show();
+            
         }
+
+        private void btnAzurirajPacijent_Click(object sender, EventArgs e)
+        {
+            frmDodavanjePacijenta DodavanjePacijenta = new frmDodavanjePacijenta(Pristup.azuriraj);
+            DodavanjePacijenta.ShowDialog();
+        }
+
 
         private void PrikaziPacijente()
         {
-            BindingList<pacijent> listaPacijenata = null;
-            using (var db = new bankakrviEntities())
-            {
-                listaPacijenata = new BindingList<pacijent>(db.pacijent.ToList());
-            }
-            pacijentBindingSource.DataSource = listaPacijenata;
+            BindingSource bsPregledPacijenata = new BindingSource();
+            bsPregledPacijenata.DataSource = (from p in ctx.pacijent
+                                         join t in ctx.tippacijenta on p.pacijent_tipPacijentaID equals t.tipKorisnikaID
+                                         join s in ctx.spol on p.pacijent_spolID equals s.spolID
+                                         join k in ctx.krvnagrupa on p.pacijent_krvnaGrupaID equals k.krvnaGrupaID
+                                         select new { p.OIB, p.ime, p.prezime, p.brojPoliceOsiguranja, p.adresa, p.telefon, p.email, p.tezina, p.datum_rodenja, krvnaGrupa = k.naziv, tipPacijenta = t.naziv, spol = s.naziv }).ToList();
+
+
+
+            dgvPacijenti.DataSource = bsPregledPacijenata;
+            
         }
 
 
@@ -42,6 +55,8 @@ namespace BankaKrvi
 
         }
 
+        
+        
         private void frmPregledPacijenata_Load(object sender, EventArgs e)
         {
             PrikaziPacijente();

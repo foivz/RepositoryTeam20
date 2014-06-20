@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbDnpIme = new System.Windows.Forms.TextBox();
-            this.txbDnpPrezime = new System.Windows.Forms.TextBox();
-            this.txbDnpAdresa = new System.Windows.Forms.TextBox();
-            this.txbDnpPolicaOsiguranja = new System.Windows.Forms.TextBox();
-            this.txbDnpTelefon = new System.Windows.Forms.TextBox();
-            this.txbDnpEmail = new System.Windows.Forms.TextBox();
-            this.txbDnpTezina = new System.Windows.Forms.TextBox();
-            this.txbDnpOIB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,64 +44,16 @@
             this.cboxDnpTip = new System.Windows.Forms.ComboBox();
             this.cboxDnpSpol = new System.Windows.Forms.ComboBox();
             this.btnDnpDodaj = new System.Windows.Forms.Button();
+            this.txbDnpOIB = new System.Windows.Forms.TextBox();
+            this.txbDnpIme = new System.Windows.Forms.TextBox();
+            this.txbDnpPrezime = new System.Windows.Forms.TextBox();
+            this.txbDnpAdresa = new System.Windows.Forms.TextBox();
+            this.txbDnpTelefon = new System.Windows.Forms.TextBox();
+            this.txbDnpEmail = new System.Windows.Forms.TextBox();
+            this.txbDnpPolicaOsiguranja = new System.Windows.Forms.TextBox();
             this.dtpDnpDatumRodenja = new System.Windows.Forms.DateTimePicker();
+            this.txbDnpTezina = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // txbDnpIme
-            // 
-            this.txbDnpIme.Location = new System.Drawing.Point(202, 132);
-            this.txbDnpIme.Name = "txbDnpIme";
-            this.txbDnpIme.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpIme.TabIndex = 0;
-            // 
-            // txbDnpPrezime
-            // 
-            this.txbDnpPrezime.Location = new System.Drawing.Point(202, 183);
-            this.txbDnpPrezime.Name = "txbDnpPrezime";
-            this.txbDnpPrezime.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpPrezime.TabIndex = 1;
-            // 
-            // txbDnpAdresa
-            // 
-            this.txbDnpAdresa.Location = new System.Drawing.Point(202, 231);
-            this.txbDnpAdresa.Name = "txbDnpAdresa";
-            this.txbDnpAdresa.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpAdresa.TabIndex = 2;
-            // 
-            // txbDnpPolicaOsiguranja
-            // 
-            this.txbDnpPolicaOsiguranja.Location = new System.Drawing.Point(650, 78);
-            this.txbDnpPolicaOsiguranja.Name = "txbDnpPolicaOsiguranja";
-            this.txbDnpPolicaOsiguranja.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpPolicaOsiguranja.TabIndex = 4;
-            // 
-            // txbDnpTelefon
-            // 
-            this.txbDnpTelefon.Location = new System.Drawing.Point(202, 283);
-            this.txbDnpTelefon.Name = "txbDnpTelefon";
-            this.txbDnpTelefon.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpTelefon.TabIndex = 5;
-            // 
-            // txbDnpEmail
-            // 
-            this.txbDnpEmail.Location = new System.Drawing.Point(202, 343);
-            this.txbDnpEmail.Name = "txbDnpEmail";
-            this.txbDnpEmail.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpEmail.TabIndex = 6;
-            // 
-            // txbDnpTezina
-            // 
-            this.txbDnpTezina.Location = new System.Drawing.Point(650, 183);
-            this.txbDnpTezina.Name = "txbDnpTezina";
-            this.txbDnpTezina.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpTezina.TabIndex = 8;
-            // 
-            // txbDnpOIB
-            // 
-            this.txbDnpOIB.Location = new System.Drawing.Point(202, 78);
-            this.txbDnpOIB.Name = "txbDnpOIB";
-            this.txbDnpOIB.Size = new System.Drawing.Size(232, 20);
-            this.txbDnpOIB.TabIndex = 11;
             // 
             // label1
             // 
@@ -253,6 +197,56 @@
             this.btnDnpDodaj.UseVisualStyleBackColor = true;
             this.btnDnpDodaj.Click += new System.EventHandler(this.btnDnpDodaj_Click);
             // 
+            // txbDnpOIB
+            // 
+            this.txbDnpOIB.Location = new System.Drawing.Point(175, 82);
+            this.txbDnpOIB.Name = "txbDnpOIB";
+            this.txbDnpOIB.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpOIB.TabIndex = 30;
+            // 
+            // txbDnpIme
+            // 
+            this.txbDnpIme.Location = new System.Drawing.Point(175, 129);
+            this.txbDnpIme.Name = "txbDnpIme";
+            this.txbDnpIme.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpIme.TabIndex = 31;
+            // 
+            // txbDnpPrezime
+            // 
+            this.txbDnpPrezime.Location = new System.Drawing.Point(175, 180);
+            this.txbDnpPrezime.Name = "txbDnpPrezime";
+            this.txbDnpPrezime.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpPrezime.TabIndex = 32;
+            // 
+            // txbDnpAdresa
+            // 
+            this.txbDnpAdresa.Location = new System.Drawing.Point(175, 231);
+            this.txbDnpAdresa.Name = "txbDnpAdresa";
+            this.txbDnpAdresa.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpAdresa.TabIndex = 33;
+            // 
+            // txbDnpTelefon
+            // 
+            this.txbDnpTelefon.Location = new System.Drawing.Point(175, 290);
+            this.txbDnpTelefon.Name = "txbDnpTelefon";
+            this.txbDnpTelefon.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpTelefon.TabIndex = 34;
+            // 
+            // txbDnpEmail
+            // 
+            this.txbDnpEmail.Location = new System.Drawing.Point(175, 342);
+            this.txbDnpEmail.Name = "txbDnpEmail";
+            this.txbDnpEmail.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpEmail.TabIndex = 35;
+            // 
+            // txbDnpPolicaOsiguranja
+            // 
+            this.txbDnpPolicaOsiguranja.ForeColor = System.Drawing.Color.Black;
+            this.txbDnpPolicaOsiguranja.Location = new System.Drawing.Point(650, 78);
+            this.txbDnpPolicaOsiguranja.Name = "txbDnpPolicaOsiguranja";
+            this.txbDnpPolicaOsiguranja.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpPolicaOsiguranja.TabIndex = 36;
+            // 
             // dtpDnpDatumRodenja
             // 
             this.dtpDnpDatumRodenja.CustomFormat = "yyyy-MM-dd";
@@ -260,18 +254,33 @@
             this.dtpDnpDatumRodenja.Location = new System.Drawing.Point(650, 133);
             this.dtpDnpDatumRodenja.Name = "dtpDnpDatumRodenja";
             this.dtpDnpDatumRodenja.Size = new System.Drawing.Size(232, 20);
-            this.dtpDnpDatumRodenja.TabIndex = 24;
+            this.dtpDnpDatumRodenja.TabIndex = 37;
+            // 
+            // txbDnpTezina
+            // 
+            this.txbDnpTezina.Location = new System.Drawing.Point(650, 183);
+            this.txbDnpTezina.Name = "txbDnpTezina";
+            this.txbDnpTezina.Size = new System.Drawing.Size(232, 20);
+            this.txbDnpTezina.TabIndex = 38;
             // 
             // frmDodavanjePacijenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 500);
+            this.Controls.Add(this.txbDnpTezina);
+            this.Controls.Add(this.dtpDnpDatumRodenja);
+            this.Controls.Add(this.txbDnpPolicaOsiguranja);
+            this.Controls.Add(this.txbDnpEmail);
+            this.Controls.Add(this.txbDnpTelefon);
+            this.Controls.Add(this.txbDnpAdresa);
+            this.Controls.Add(this.txbDnpPrezime);
+            this.Controls.Add(this.txbDnpIme);
+            this.Controls.Add(this.txbDnpOIB);
             this.Controls.Add(this.btnDnpDodaj);
             this.Controls.Add(this.cboxDnpSpol);
             this.Controls.Add(this.cboxDnpTip);
             this.Controls.Add(this.cboxDnpKrvnaGrupa);
-            this.Controls.Add(this.dtpDnpDatumRodenja);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -284,14 +293,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txbDnpOIB);
-            this.Controls.Add(this.txbDnpTezina);
-            this.Controls.Add(this.txbDnpEmail);
-            this.Controls.Add(this.txbDnpTelefon);
-            this.Controls.Add(this.txbDnpPolicaOsiguranja);
-            this.Controls.Add(this.txbDnpAdresa);
-            this.Controls.Add(this.txbDnpPrezime);
-            this.Controls.Add(this.txbDnpIme);
             this.Name = "frmDodavanjePacijenta";
             this.Load += new System.EventHandler(this.frmDodavanjePacijenta_Load);
             this.ResumeLayout(false);
@@ -301,14 +302,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txbDnpIme;
-        private System.Windows.Forms.TextBox txbDnpPrezime;
-        private System.Windows.Forms.TextBox txbDnpAdresa;
-        private System.Windows.Forms.TextBox txbDnpPolicaOsiguranja;
-        private System.Windows.Forms.TextBox txbDnpTelefon;
-        private System.Windows.Forms.TextBox txbDnpEmail;
-        private System.Windows.Forms.TextBox txbDnpTezina;
-        private System.Windows.Forms.TextBox txbDnpOIB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -325,7 +318,15 @@
         private System.Windows.Forms.ComboBox cboxDnpTip;
         private System.Windows.Forms.ComboBox cboxDnpSpol;
         private System.Windows.Forms.Button btnDnpDodaj;
+        private System.Windows.Forms.TextBox txbDnpOIB;
+        private System.Windows.Forms.TextBox txbDnpIme;
+        private System.Windows.Forms.TextBox txbDnpPrezime;
+        private System.Windows.Forms.TextBox txbDnpAdresa;
+        private System.Windows.Forms.TextBox txbDnpTelefon;
+        private System.Windows.Forms.TextBox txbDnpEmail;
+        private System.Windows.Forms.TextBox txbDnpPolicaOsiguranja;
         private System.Windows.Forms.DateTimePicker dtpDnpDatumRodenja;
+        private System.Windows.Forms.TextBox txbDnpTezina;
 
     }
 }

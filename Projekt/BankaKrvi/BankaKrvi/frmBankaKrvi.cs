@@ -114,5 +114,15 @@ namespace BankaKrvi
         {
 
         }
+
+        private void generiranjeListeDonoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmListaDonora ListaDonora = new frmListaDonora();
+            ListaDonora.MdiParent = this;
+            ListaDonora.WindowState = FormWindowState.Maximized;
+            ListaDonora.Show();
+
+        }
     }
 }

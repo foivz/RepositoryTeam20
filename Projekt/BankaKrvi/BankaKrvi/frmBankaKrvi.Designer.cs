@@ -105,6 +105,7 @@
             this.generiranjeListeDonoraToolStripMenuItem.Name = "generiranjeListeDonoraToolStripMenuItem";
             this.generiranjeListeDonoraToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.generiranjeListeDonoraToolStripMenuItem.Text = "Generiranje liste donora";
+            this.generiranjeListeDonoraToolStripMenuItem.Click += new System.EventHandler(this.generiranjeListeDonoraToolStripMenuItem_Click);
             // 
             // donacijeToolStripMenuItem
             // 
@@ -297,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 802);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

@@ -125,6 +125,12 @@
     <Compile Include="frmHladnjak.Designer.cs">
       <DependentUpon>frmHladnjak.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaDonora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDonora.Designer.cs">
+      <DependentUpon>frmListaDonora.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPregledDonacija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHladnjak.resx">
       <DependentUpon>frmHladnjak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaDonora.resx">
+      <DependentUpon>frmListaDonora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPregledDonacija.resx">
       <DependentUpon>frmPregledDonacija.cs</DependentUpon>

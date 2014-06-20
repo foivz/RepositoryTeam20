@@ -35,6 +35,7 @@ namespace BankaKrvi
             if (pristupPacijentu == Pristup.azuriraj)
             {
                 this.Text = "Ažuriraj podatke pacijenta";
+                
             }
             else if (pristupPacijentu == Pristup.kreiraj)
             {
@@ -44,33 +45,38 @@ namespace BankaKrvi
 
         private void frmDodavanjePacijenta_Load(object sender, EventArgs e)
         {
-            using (var db = new bankakrviEntities())
+            if (pristupPacijentu == Pristup.azuriraj)
             {
-                cboxDnpKrvnaGrupa.DataSource = db.krvnagrupa.ToList();
-                cboxDnpKrvnaGrupa.ValueMember = "krvnaGrupaID";
-                cboxDnpKrvnaGrupa.DisplayMember = "naziv";
+               //todo ucitaj podatke pacijenta
 
-                cboxDnpSpol.DataSource = db.spol.ToList();
-                cboxDnpSpol.ValueMember = "spolID";
-                cboxDnpSpol.DisplayMember = "naziv";
-
-                cboxDnpTip.DataSource = db.tippacijenta.ToList();
-                cboxDnpTip.ValueMember = "tipkorisnikaID";
-                cboxDnpTip.DisplayMember = "naziv";
             }
+            else if (pristupPacijentu == Pristup.kreiraj)
+            {
+                using (var db = new bankakrviEntities())
+                {
+                    cboxDnpKrvnaGrupa.DataSource = db.krvnagrupa.ToList();
+                    cboxDnpKrvnaGrupa.ValueMember = "krvnaGrupaID";
+                    cboxDnpKrvnaGrupa.DisplayMember = "naziv";
+
+                    cboxDnpSpol.DataSource = db.spol.ToList();
+                    cboxDnpSpol.ValueMember = "spolID";
+                    cboxDnpSpol.DisplayMember = "naziv";
+
+                    cboxDnpTip.DataSource = db.tippacijenta.ToList();
+                    cboxDnpTip.ValueMember = "tipkorisnikaID";
+                    cboxDnpTip.DisplayMember = "naziv";
+                }
+            }
+            
 
         }
         
-
         private void btnDnpDodaj_Click(object sender, EventArgs e)
         {
-
-            
+   
             using (var db = new bankakrviEntities()) 
             {
 
-
-                
                 pacijent noviPacijent = new pacijent
                 {  
                     
