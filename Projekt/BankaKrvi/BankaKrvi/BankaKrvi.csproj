@@ -35,13 +35,18 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bankakrviDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankakrviDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bankaKrviModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +236,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>bankaKrviModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bankakrviDataSet.xsc">
+      <DependentUpon>bankakrviDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bankakrviDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankakrviDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankakrviDataSet.xss">
+      <DependentUpon>bankakrviDataSet.xsd</DependentUpon>
+    </None>
     <None Include="bankaKrviModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>bankaKrviModel.edmx</DependentUpon>

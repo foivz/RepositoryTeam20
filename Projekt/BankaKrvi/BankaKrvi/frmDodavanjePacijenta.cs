@@ -15,7 +15,7 @@ namespace BankaKrvi
     {
         nista , azuriraj, kreiraj
     };
-
+    
     public partial class frmDodavanjePacijenta : Form
     {
         private Pristup pristupPacijentu = Pristup.nista;
@@ -60,14 +60,20 @@ namespace BankaKrvi
             }
 
         }
+        
 
         private void btnDnpDodaj_Click(object sender, EventArgs e)
         {
+
             
             using (var db = new bankakrviEntities()) 
             {
+
+
+                
                 pacijent noviPacijent = new pacijent
-                {
+                {  
+                    
                     OIB = txbDnpOIB.Text,
                     ime = txbDnpIme.Text,
                     prezime = txbDnpPrezime.Text,
@@ -76,10 +82,10 @@ namespace BankaKrvi
                     telefon = txbDnpTelefon.Text,
                     email = txbDnpEmail.Text,
                     tezina = txbDnpTezina.Text,
-                    datum_rodenja = DateTime.ParseExact(dtpDnpDatumRodenja.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture), //ne radi
-                    pacijent_krvnaGrupaID = Convert.ToInt32(cboxDnpKrvnaGrupa.ValueMember),
-                    pacijent_tipPacijentaID = Convert.ToInt32(cboxDnpTip.ValueMember),
-                    pacijent_spolID = Convert.ToInt32(cboxDnpSpol.ValueMember)
+                    datum_rodenja = DateTime.Parse(dtpDnpDatumRodenja.Value.ToString("yyyy-MM-dd")),
+                    pacijent_krvnaGrupaID = Convert.ToInt32(cboxDnpKrvnaGrupa.SelectedValue),
+                    pacijent_tipPacijentaID = Convert.ToInt32(cboxDnpTip.SelectedValue),
+                    pacijent_spolID = Convert.ToInt32(cboxDnpSpol.SelectedValue)
                 };
                 db.pacijent.Add(noviPacijent);
                 db.SaveChanges();
