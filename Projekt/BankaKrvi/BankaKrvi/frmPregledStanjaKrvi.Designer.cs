@@ -35,15 +35,23 @@
             // 
             // dgvZaliheKrvi
             // 
+            this.dgvZaliheKrvi.AllowUserToAddRows = false;
+            this.dgvZaliheKrvi.AllowUserToDeleteRows = false;
+            this.dgvZaliheKrvi.AllowUserToOrderColumns = true;
+            this.dgvZaliheKrvi.AllowUserToResizeColumns = false;
+            this.dgvZaliheKrvi.AllowUserToResizeRows = false;
             this.dgvZaliheKrvi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvZaliheKrvi.Location = new System.Drawing.Point(12, 45);
+            this.dgvZaliheKrvi.Location = new System.Drawing.Point(13, 12);
+            this.dgvZaliheKrvi.MultiSelect = false;
             this.dgvZaliheKrvi.Name = "dgvZaliheKrvi";
-            this.dgvZaliheKrvi.Size = new System.Drawing.Size(420, 154);
+            this.dgvZaliheKrvi.RowHeadersVisible = false;
+            this.dgvZaliheKrvi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvZaliheKrvi.Size = new System.Drawing.Size(578, 256);
             this.dgvZaliheKrvi.TabIndex = 0;
             // 
             // btnPosaljiMail
             // 
-            this.btnPosaljiMail.Location = new System.Drawing.Point(13, 225);
+            this.btnPosaljiMail.Location = new System.Drawing.Point(13, 274);
             this.btnPosaljiMail.Name = "btnPosaljiMail";
             this.btnPosaljiMail.Size = new System.Drawing.Size(137, 29);
             this.btnPosaljiMail.TabIndex = 1;
@@ -60,6 +68,7 @@
             this.Controls.Add(this.dgvZaliheKrvi);
             this.Name = "frmPregledStanjaKrvi";
             this.Text = "Pregled zaliha krvi";
+            this.Load += new System.EventHandler(this.frmPregledStanjaKrvi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaliheKrvi)).EndInit();
             this.ResumeLayout(false);
 
