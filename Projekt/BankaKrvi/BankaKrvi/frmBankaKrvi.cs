@@ -185,5 +185,14 @@ namespace BankaKrvi
             DodavanjeHladnjaka.WindowState = FormWindowState.Maximized;
             DodavanjeHladnjaka.Show();
         }
+
+        private void dodajUstanovuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmDodavanjeUstanova DodavanjeUstanova = new frmDodavanjeUstanova(Pristup.kreiraj);
+            DodavanjeUstanova.MdiParent = this;
+            DodavanjeUstanova.WindowState = FormWindowState.Maximized;
+            DodavanjeUstanova.Show();
+        }
     }
 }

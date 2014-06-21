@@ -85,6 +85,7 @@ namespace BankaKrvi
                 db.zaposlenik.Add(noviZaposlenik);
                 db.SaveChanges();
             }
+            essageBox.Show("Uspješno ste dodali zaposelnika");
             Close();
         }
     }

@@ -96,6 +96,7 @@ namespace BankaKrvi
                 db.pacijent.Add(noviPacijent);
                 db.SaveChanges();
             }
+            MessageBox.Show("Uspješno ste dodali pacijenta");
             Close();
         }
         
