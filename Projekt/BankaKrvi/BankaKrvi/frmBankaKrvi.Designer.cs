@@ -183,6 +183,7 @@
             this.dodajHladnjakToolStripMenuItem.Name = "dodajHladnjakToolStripMenuItem";
             this.dodajHladnjakToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.dodajHladnjakToolStripMenuItem.Text = "Dodaj hladnjak";
+            this.dodajHladnjakToolStripMenuItem.Click += new System.EventHandler(this.dodajHladnjakToolStripMenuItem_Click);
             // 
             // statistikaToolStripMenuItem
             // 
@@ -216,7 +217,7 @@
             this.pregledZaposlenikaToolStripMenuItem,
             this.dodajZaposlenikaToolStripMenuItem});
             this.zaposleniciToolStripMenuItem.Name = "zaposleniciToolStripMenuItem";
-            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.zaposleniciToolStripMenuItem.Text = "Zaposlenici";
             // 
             // pregledZaposlenikaToolStripMenuItem
@@ -239,7 +240,7 @@
             this.pregledUstanovaToolStripMenuItem,
             this.dodajUstanovuToolStripMenuItem});
             this.ustanoveToolStripMenuItem.Name = "ustanoveToolStripMenuItem";
-            this.ustanoveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ustanoveToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.ustanoveToolStripMenuItem.Text = "Ustanove";
             // 
             // pregledUstanovaToolStripMenuItem
@@ -261,7 +262,7 @@
             this.pregledBolestiToolStripMenuItem,
             this.dodajBolestiToolStripMenuItem});
             this.bolestiToolStripMenuItem.Name = "bolestiToolStripMenuItem";
-            this.bolestiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bolestiToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.bolestiToolStripMenuItem.Text = "Bolesti";
             // 
             // pregledBolestiToolStripMenuItem
@@ -283,7 +284,7 @@
             this.pregledReakcijaToolStripMenuItem,
             this.dodajReakcijuToolStripMenuItem});
             this.reakcijeToolStripMenuItem.Name = "reakcijeToolStripMenuItem";
-            this.reakcijeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reakcijeToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.reakcijeToolStripMenuItem.Text = "Reakcije";
             // 
             // pregledReakcijaToolStripMenuItem
