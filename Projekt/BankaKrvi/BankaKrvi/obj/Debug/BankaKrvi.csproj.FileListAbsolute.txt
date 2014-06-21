@@ -61,3 +61,8 @@ C:\Users\Korisnik1\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi
 C:\Users\Korisnik1\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csproj.GenerateResource.Cache
 C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmListaDonora.resources
 C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPrijavaKorisnika.resources
+C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledZaposlenika.resources
+C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledUstanova.resources
+C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledBolesti.resources
+C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledReakcija.resources
+C:\Users\vlazar\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeZaposlenika.resources

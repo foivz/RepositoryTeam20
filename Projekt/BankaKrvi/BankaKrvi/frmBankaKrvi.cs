@@ -124,5 +124,57 @@ namespace BankaKrvi
             ListaDonora.Show();
 
         }
+
+        private void pregledZaposlenikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmPregledZaposlenika PregledZaposlenika = new frmPregledZaposlenika();
+            PregledZaposlenika.MdiParent = this;
+            PregledZaposlenika.WindowState = FormWindowState.Maximized;
+            PregledZaposlenika.Show();
+
+        }
+
+        private void pregledUstanovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmPregledUstanova PregledUstanova = new frmPregledUstanova();
+            PregledUstanova.MdiParent = this;
+            PregledUstanova.WindowState = FormWindowState.Maximized;
+            PregledUstanova.Show();
+
+        }
+
+        private void pregledBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmPregledBolesti PregledBolesti = new frmPregledBolesti();
+            PregledBolesti.MdiParent = this;
+            PregledBolesti.WindowState = FormWindowState.Maximized;
+            PregledBolesti.Show();
+
+
+        }
+
+        private void pregledReakcijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmPregledReakcija PregledReakcija = new frmPregledReakcija();
+            PregledReakcija.MdiParent = this;
+            PregledReakcija.WindowState = FormWindowState.Maximized;
+            PregledReakcija.Show();
+
+        }
+
+        private void dodajZaposlenikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmDodavanjeZaposlenika DodavanjeZaposlenika = new frmDodavanjeZaposlenika(Pristup.kreiraj);
+            DodavanjeZaposlenika.MdiParent = this;
+            DodavanjeZaposlenika.WindowState = FormWindowState.Maximized;
+            DodavanjeZaposlenika.Show();
+
+
+        }
     }
 }

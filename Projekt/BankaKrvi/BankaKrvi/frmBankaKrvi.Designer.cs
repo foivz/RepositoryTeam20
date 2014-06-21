@@ -216,7 +216,7 @@
             this.pregledZaposlenikaToolStripMenuItem,
             this.dodajZaposlenikaToolStripMenuItem});
             this.zaposleniciToolStripMenuItem.Name = "zaposleniciToolStripMenuItem";
-            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.zaposleniciToolStripMenuItem.Text = "Zaposlenici";
             // 
             // pregledZaposlenikaToolStripMenuItem
@@ -224,12 +224,14 @@
             this.pregledZaposlenikaToolStripMenuItem.Name = "pregledZaposlenikaToolStripMenuItem";
             this.pregledZaposlenikaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.pregledZaposlenikaToolStripMenuItem.Text = "Pregled zaposlenika";
+            this.pregledZaposlenikaToolStripMenuItem.Click += new System.EventHandler(this.pregledZaposlenikaToolStripMenuItem_Click);
             // 
             // dodajZaposlenikaToolStripMenuItem
             // 
             this.dodajZaposlenikaToolStripMenuItem.Name = "dodajZaposlenikaToolStripMenuItem";
             this.dodajZaposlenikaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.dodajZaposlenikaToolStripMenuItem.Text = "Dodaj zaposlenika";
+            this.dodajZaposlenikaToolStripMenuItem.Click += new System.EventHandler(this.dodajZaposlenikaToolStripMenuItem_Click);
             // 
             // ustanoveToolStripMenuItem
             // 
@@ -237,7 +239,7 @@
             this.pregledUstanovaToolStripMenuItem,
             this.dodajUstanovuToolStripMenuItem});
             this.ustanoveToolStripMenuItem.Name = "ustanoveToolStripMenuItem";
-            this.ustanoveToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.ustanoveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ustanoveToolStripMenuItem.Text = "Ustanove";
             // 
             // pregledUstanovaToolStripMenuItem
@@ -245,6 +247,7 @@
             this.pregledUstanovaToolStripMenuItem.Name = "pregledUstanovaToolStripMenuItem";
             this.pregledUstanovaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.pregledUstanovaToolStripMenuItem.Text = "Pregled ustanova";
+            this.pregledUstanovaToolStripMenuItem.Click += new System.EventHandler(this.pregledUstanovaToolStripMenuItem_Click);
             // 
             // dodajUstanovuToolStripMenuItem
             // 
@@ -258,7 +261,7 @@
             this.pregledBolestiToolStripMenuItem,
             this.dodajBolestiToolStripMenuItem});
             this.bolestiToolStripMenuItem.Name = "bolestiToolStripMenuItem";
-            this.bolestiToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.bolestiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bolestiToolStripMenuItem.Text = "Bolesti";
             // 
             // pregledBolestiToolStripMenuItem
@@ -266,6 +269,7 @@
             this.pregledBolestiToolStripMenuItem.Name = "pregledBolestiToolStripMenuItem";
             this.pregledBolestiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pregledBolestiToolStripMenuItem.Text = "Pregled bolesti";
+            this.pregledBolestiToolStripMenuItem.Click += new System.EventHandler(this.pregledBolestiToolStripMenuItem_Click);
             // 
             // dodajBolestiToolStripMenuItem
             // 
@@ -279,7 +283,7 @@
             this.pregledReakcijaToolStripMenuItem,
             this.dodajReakcijuToolStripMenuItem});
             this.reakcijeToolStripMenuItem.Name = "reakcijeToolStripMenuItem";
-            this.reakcijeToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.reakcijeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reakcijeToolStripMenuItem.Text = "Reakcije";
             // 
             // pregledReakcijaToolStripMenuItem
@@ -287,6 +291,7 @@
             this.pregledReakcijaToolStripMenuItem.Name = "pregledReakcijaToolStripMenuItem";
             this.pregledReakcijaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.pregledReakcijaToolStripMenuItem.Text = "Pregled reakcija";
+            this.pregledReakcijaToolStripMenuItem.Click += new System.EventHandler(this.pregledReakcijaToolStripMenuItem_Click);
             // 
             // dodajReakcijuToolStripMenuItem
             // 

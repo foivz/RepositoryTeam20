@@ -95,6 +95,12 @@
     <Compile Include="frmDodajTest.Designer.cs">
       <DependentUpon>frmDodajTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDodavanjeZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodavanjeZaposlenika.Designer.cs">
+      <DependentUpon>frmDodavanjeZaposlenika.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDodavanjeDonacije.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     <Compile Include="frmListaDonora.Designer.cs">
       <DependentUpon>frmListaDonora.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPregledBolesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledBolesti.Designer.cs">
+      <DependentUpon>frmPregledBolesti.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPregledDonacija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,12 @@
     <Compile Include="frmPregledPacijenata.Designer.cs">
       <DependentUpon>frmPregledPacijenata.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPregledReakcija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledReakcija.Designer.cs">
+      <DependentUpon>frmPregledReakcija.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPregledStanjaKrvi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +178,18 @@
     </Compile>
     <Compile Include="frmPregledTransfuzija.Designer.cs">
       <DependentUpon>frmPregledTransfuzija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledUstanova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledUstanova.Designer.cs">
+      <DependentUpon>frmPregledUstanova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregledZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregledZaposlenika.Designer.cs">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrijavaKorisnika.cs">
       <SubType>Form</SubType>
@@ -220,11 +250,17 @@
     <EmbeddedResource Include="frmDodavanjeTransfuzije.resx">
       <DependentUpon>frmDodavanjeTransfuzije.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDodavanjeZaposlenika.resx">
+      <DependentUpon>frmDodavanjeZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHladnjak.resx">
       <DependentUpon>frmHladnjak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDonora.resx">
       <DependentUpon>frmListaDonora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledBolesti.resx">
+      <DependentUpon>frmPregledBolesti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPregledDonacija.resx">
       <DependentUpon>frmPregledDonacija.cs</DependentUpon>
@@ -235,8 +271,17 @@
     <EmbeddedResource Include="frmPregledPacijenata.resx">
       <DependentUpon>frmPregledPacijenata.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledReakcija.resx">
+      <DependentUpon>frmPregledReakcija.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPregledStanjaKrvi.resx">
       <DependentUpon>frmPregledStanjaKrvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledUstanova.resx">
+      <DependentUpon>frmPregledUstanova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledZaposlenika.resx">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrijavaKorisnika.resx">
       <DependentUpon>frmPrijavaKorisnika.cs</DependentUpon>
