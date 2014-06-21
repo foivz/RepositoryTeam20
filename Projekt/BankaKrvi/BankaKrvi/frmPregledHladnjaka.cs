@@ -18,12 +18,27 @@ namespace BankaKrvi
             this.CenterToParent();
         }
 
+        private void frmPregledHladnjaka_Load(object sender, EventArgs e)
+        {
+            BindingSource bsPregledHladnjaka = new BindingSource();
+            using (var db = new bankakrviEntities())
+            {
+                bsPregledHladnjaka.DataSource = (from h in db.hladnjak
+                                                 join k in db.krvnagrupa on h.hladnjak_krvnaGrupaID equals k.krvnaGrupaID
+                                                 select new { h.hladnjakID, h.naziv, h.pun, krvnagrupa = k.naziv }).ToList();
+            }
+            dgvHladnjaci.DataSource = bsPregledHladnjaka;
+        }
+
         private void btnDetaljno_Click(object sender, EventArgs e)
         {
-            frmHladnjak Hladnjak = new frmHladnjak();
-            this.Hide();
-            Hladnjak.ShowDialog();
-            this.Show();
+            int selektirani = int.Parse(dgvHladnjaci.CurrentRow.Cells[0].Value.ToString());
+            frmDodavanjeHladnjaka dodajHladnjak = new frmDodavanjeHladnjaka(selektirani);
+            dodajHladnjak.MdiParent = this.MdiParent;
+            dodajHladnjak.Show();
+            this.Close();
         }
+
+
     }
 }

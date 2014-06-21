@@ -153,3 +153,4 @@ E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledZaposle
 E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPrijavaKorisnika.resources
 E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.Properties.Resources.resources
 E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csproj.GenerateResource.Cache
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeUstanova.resources

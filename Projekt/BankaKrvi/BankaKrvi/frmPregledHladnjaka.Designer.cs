@@ -37,7 +37,10 @@
             // 
             this.dgvHladnjaci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHladnjaci.Location = new System.Drawing.Point(21, 28);
+            this.dgvHladnjaci.MultiSelect = false;
             this.dgvHladnjaci.Name = "dgvHladnjaci";
+            this.dgvHladnjaci.RowHeadersVisible = false;
+            this.dgvHladnjaci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHladnjaci.Size = new System.Drawing.Size(573, 246);
             this.dgvHladnjaci.TabIndex = 0;
             // 
@@ -60,6 +63,7 @@
             this.Controls.Add(this.dgvHladnjaci);
             this.Name = "frmPregledHladnjaka";
             this.Text = "Pregled hladnjaka";
+            this.Load += new System.EventHandler(this.frmPregledHladnjaka_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHladnjaci)).EndInit();
             this.ResumeLayout(false);
 

@@ -12,13 +12,32 @@ namespace BankaKrvi
 {
     public partial class frmDodavanjeHladnjaka : Form
     {
+        private Boolean noviZapis;
+        private hladnjak h;
+
         public frmDodavanjeHladnjaka()
         {
             InitializeComponent();
             txtId.Text = "Novi unos";
             dohvatiKrvneGrupe();
+            noviZapis = true;
         }
 
+        public frmDodavanjeHladnjaka(int selektirani)
+        {
+            InitializeComponent();
+            this.Text = "Uređivanje zapisa";
+            dohvatiKrvneGrupe();
+            using (var db = new bankakrviEntities())
+            {
+                h = db.hladnjak.Where(x => x.hladnjakID.Equals(selektirani)).First();
+                txtId.Text = h.hladnjakID.ToString();
+                txtNaziv.Text = h.naziv;
+                cbPun.Checked = (bool)h.pun;
+                cboxKrvnaGrupa.SelectedValue = h.hladnjak_krvnaGrupaID;
+            }
+            noviZapis = false;
+        }
 
         private void dohvatiKrvneGrupe()
         {
@@ -34,11 +53,21 @@ namespace BankaKrvi
         {
             using (var db = new bankakrviEntities())
             {
-                hladnjak hladnjak = new hladnjak();
-                hladnjak.naziv = txtNaziv.Text;
-                hladnjak.pun = cbPun.Checked;
-                hladnjak.hladnjak_krvnaGrupaID = Convert.ToInt32(cboxKrvnaGrupa.SelectedValue);
-                db.hladnjak.Add(hladnjak);
+                if (noviZapis)
+                {
+                    h = new hladnjak();
+                }
+                else
+                {
+                    db.hladnjak.Attach(h);
+                }
+                h.naziv = txtNaziv.Text;
+                h.pun = cbPun.Checked;
+                h.hladnjak_krvnaGrupaID = Convert.ToInt32(cboxKrvnaGrupa.SelectedValue);
+                if (noviZapis)
+                {
+                    db.hladnjak.Add(h);
+                }
                 db.SaveChanges();
             }
             frmPregledHladnjaka hladnjaci = new frmPregledHladnjaka();
