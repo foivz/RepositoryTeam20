@@ -161,6 +161,12 @@
     <Compile Include="frmPregledTransfuzija.Designer.cs">
       <DependentUpon>frmPregledTransfuzija.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrijavaKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijavaKorisnika.Designer.cs">
+      <DependentUpon>frmPrijavaKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="hladnjak.cs">
       <DependentUpon>bankaKrviModel.tt</DependentUpon>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPregledStanjaKrvi.resx">
       <DependentUpon>frmPregledStanjaKrvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijavaKorisnika.resx">
+      <DependentUpon>frmPrijavaKorisnika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

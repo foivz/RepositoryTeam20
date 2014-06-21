@@ -16,7 +16,14 @@ namespace BankaKrvi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBankaKrvi());
+
+            DialogResult prijava;
+            using (frmPrijavaKorisnika prijavaKorisnika = new frmPrijavaKorisnika())
+                prijava = prijavaKorisnika.ShowDialog();
+            if (prijava == DialogResult.OK)
+            {
+                Application.Run(new frmBankaKrvi());
+            }
         }
     }
 }
