@@ -29,8 +29,12 @@ namespace BankaKrvi
 
         private void btnAzurirajPacijent_Click(object sender, EventArgs e)
         {
-            frmDodavanjePacijenta DodavanjePacijenta = new frmDodavanjePacijenta(Pristup.azuriraj);
-            DodavanjePacijenta.ShowDialog();
+            int odabrano = Convert.ToInt32(dgvPacijenti.CurrentRow.Cells[0].Value.ToString());
+
+            frmDodavanjePacijenta DodavanjePacijenta = new frmDodavanjePacijenta(Pristup.azuriraj, odabrano);
+            DodavanjePacijenta.MdiParent = this.MdiParent;
+            DodavanjePacijenta.Show();
+            this.Close();
         }
 
 
@@ -41,7 +45,7 @@ namespace BankaKrvi
                                          join t in ctx.tippacijenta on p.pacijent_tipPacijentaID equals t.tipKorisnikaID
                                          join s in ctx.spol on p.pacijent_spolID equals s.spolID
                                          join k in ctx.krvnagrupa on p.pacijent_krvnaGrupaID equals k.krvnaGrupaID
-                                         select new { p.OIB, p.ime, p.prezime, p.brojPoliceOsiguranja, p.adresa, p.telefon, p.email, p.tezina, p.datum_rodenja, krvnaGrupa = k.naziv, tipPacijenta = t.naziv, spol = s.naziv }).ToList();
+                                         select new { p.pacijentID, p.OIB, p.ime, p.prezime, p.brojPoliceOsiguranja, p.adresa, p.telefon, p.email, p.tezina, p.datum_rodenja, krvnaGrupa = k.naziv, tipPacijenta = t.naziv, spol = s.naziv }).ToList();
 
 
 
