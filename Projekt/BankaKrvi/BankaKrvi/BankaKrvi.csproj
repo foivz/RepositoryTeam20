@@ -327,9 +327,11 @@
     <None Include="ClassDiagram2.cd" />
     <None Include="ClassDiagram3.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\donacija.datasource" />
     <None Include="Properties\DataSources\krvnagrupa.datasource" />
     <None Include="Properties\DataSources\pacijent.datasource" />
     <None Include="Properties\DataSources\spol.datasource" />
+    <None Include="Properties\DataSources\test.datasource" />
     <None Include="Properties\DataSources\tippacijenta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

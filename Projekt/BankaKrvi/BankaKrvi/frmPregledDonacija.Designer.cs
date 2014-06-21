@@ -43,12 +43,13 @@
             this.dgvDonacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonacije.Location = new System.Drawing.Point(12, 26);
             this.dgvDonacije.Name = "dgvDonacije";
-            this.dgvDonacije.Size = new System.Drawing.Size(447, 247);
+            this.dgvDonacije.Size = new System.Drawing.Size(984, 247);
             this.dgvDonacije.TabIndex = 0;
+            this.dgvDonacije.SelectionChanged += new System.EventHandler(this.dgvDonacije_SelectionChanged);
             // 
             // btnDodajTest
             // 
-            this.btnDodajTest.Location = new System.Drawing.Point(12, 288);
+            this.btnDodajTest.Location = new System.Drawing.Point(23, 558);
             this.btnDodajTest.Name = "btnDodajTest";
             this.btnDodajTest.Size = new System.Drawing.Size(112, 23);
             this.btnDodajTest.TabIndex = 1;
@@ -59,9 +60,9 @@
             // dgvTestovi
             // 
             this.dgvTestovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTestovi.Location = new System.Drawing.Point(533, 26);
+            this.dgvTestovi.Location = new System.Drawing.Point(16, 344);
             this.dgvTestovi.Name = "dgvTestovi";
-            this.dgvTestovi.Size = new System.Drawing.Size(463, 247);
+            this.dgvTestovi.Size = new System.Drawing.Size(980, 160);
             this.dgvTestovi.TabIndex = 2;
             // 
             // label1
@@ -76,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(530, 10);
+            this.label2.Location = new System.Drawing.Point(20, 328);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 4;
@@ -84,7 +85,7 @@
             // 
             // btnAzurirajTest
             // 
-            this.btnAzurirajTest.Location = new System.Drawing.Point(533, 288);
+            this.btnAzurirajTest.Location = new System.Drawing.Point(186, 558);
             this.btnAzurirajTest.Name = "btnAzurirajTest";
             this.btnAzurirajTest.Size = new System.Drawing.Size(119, 23);
             this.btnAzurirajTest.TabIndex = 5;
@@ -96,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 442);
+            this.ClientSize = new System.Drawing.Size(1008, 644);
             this.Controls.Add(this.btnAzurirajTest);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -105,6 +106,7 @@
             this.Controls.Add(this.dgvDonacije);
             this.Name = "frmPregledDonacija";
             this.Text = "Pregled donacija";
+            this.Load += new System.EventHandler(this.frmPregledDonacija_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonacije)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestovi)).EndInit();
             this.ResumeLayout(false);
