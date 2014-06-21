@@ -154,3 +154,4 @@ E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPrijavaKorisni
 E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.Properties.Resources.resources
 E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csproj.GenerateResource.Cache
 C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeUstanova.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmTemperaturaHladnjaka.resources

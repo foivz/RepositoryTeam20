@@ -13,6 +13,10 @@ namespace BankaKrvi
 
     public partial class frmBankaKrvi : Form
     {
+        public static List<int> podaciTemperatura = new List<int>();
+        public static Boolean otvoren = false;
+        int vrijemeOtvorenostiHladnjaka = 0;
+
         public frmBankaKrvi()
         {
             InitializeComponent();
@@ -193,6 +197,41 @@ namespace BankaKrvi
             DodavanjeUstanova.MdiParent = this;
             DodavanjeUstanova.WindowState = FormWindowState.Maximized;
             DodavanjeUstanova.Show();
+        }
+
+        private void mjeracTemperature_Tick(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            int randNum = 0;
+            if (otvoren)
+            {
+                vrijemeOtvorenostiHladnjaka++;
+                randNum = rand.Next(8, 12);
+                if (vrijemeOtvorenostiHladnjaka % 10 == 0)
+                {
+                    MessageBox.Show("Upozorenje!\nHladnjak je otvoren već " + vrijemeOtvorenostiHladnjaka.ToString() + " sekundi");
+                }
+            }
+            else
+            {
+                vrijemeOtvorenostiHladnjaka = 0;
+                randNum = rand.Next(2, 6);
+            }
+            podaciTemperatura.Add(randNum);
+        }
+
+        private void msOtvoriZatvoriHladnjak_Click(object sender, EventArgs e)
+        {
+            if (otvoren)
+            {
+                msOtvoriZatvoriHladnjak.Text = "Otvori hladnjak";
+                otvoren = false;
+            }
+            else
+            {
+                msOtvoriZatvoriHladnjak.Text = "Zatvori hladnjak";
+                otvoren = true;
+            }
         }
     }
 }

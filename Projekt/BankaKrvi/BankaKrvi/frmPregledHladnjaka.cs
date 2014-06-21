@@ -30,13 +30,22 @@ namespace BankaKrvi
             dgvHladnjaci.DataSource = bsPregledHladnjaka;
         }
 
-        private void btnDetaljno_Click(object sender, EventArgs e)
+        
+
+        private void btnAzuriraj_Click(object sender, EventArgs e)
         {
             int selektirani = int.Parse(dgvHladnjaci.CurrentRow.Cells[0].Value.ToString());
             frmDodavanjeHladnjaka dodajHladnjak = new frmDodavanjeHladnjaka(selektirani);
             dodajHladnjak.MdiParent = this.MdiParent;
             dodajHladnjak.Show();
             this.Close();
+        }
+
+        private void btnTemperaturaHladnjaka_Click(object sender, EventArgs e)
+        {
+            frmTemperaturaHladnjaka tempHladnjaka = new frmTemperaturaHladnjaka();
+            tempHladnjaka.MdiParent = this.MdiParent;
+            tempHladnjaka.Show();
         }
 
 
