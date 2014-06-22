@@ -13,7 +13,9 @@ namespace BankaKrvi
     public partial class frmDodavanjeZaposlenika : Form
     {
         private Pristup pristupZaposleniku = Pristup.nista;
-        
+        private zaposlenik z;
+        private int odabranZaposlenik;
+
         public frmDodavanjeZaposlenika(Pristup PristupZaposlenicima_)
         {
             
@@ -26,9 +28,14 @@ namespace BankaKrvi
         
         }
 
-        public frmDodavanjeZaposlenika()
+        public frmDodavanjeZaposlenika(Pristup PristupZaposlenicima_, int odabrano)
         {
-            // TODO: Complete member initialization
+            pristupZaposleniku = PristupZaposlenicima_;
+            odabranZaposlenik = odabrano;
+            InitializeComponent();
+            this.CenterToParent();
+
+            PostaviFormu();
         }
 
         private void PostaviFormu()
@@ -36,7 +43,7 @@ namespace BankaKrvi
             if (pristupZaposleniku == Pristup.azuriraj)
             {
                 this.Text = "Ažuriraj podatke zaposlenika";
-
+                btnDodajZaposlenika.Text = "Ažuriraj zaposlenika";
             }
             else if (pristupZaposleniku == Pristup.kreiraj)
             {
@@ -48,21 +55,39 @@ namespace BankaKrvi
         {
             if (pristupZaposleniku == Pristup.azuriraj)
             {
-                //todo ucitaj podatke pacijenta
+                DohvatiPodatke();
+                using (var db = new bankakrviEntities())
+                {
+                    z = db.zaposlenik.Where(x => x.zaposlenikID.Equals(odabranZaposlenik)).First();
+                    tboxZapIme.Text = z.ime;
+                    tboxZapPrezime.Text = z.prezime;
+                    tboxZapKorIme.Text = z.korisnickoIme;
+                    tboxZapLozinka.Text = z.lozinka;
+                    tboxZapEmail.Text = z.email;
+                    tboxZapTelefon.Text = z.telefon;
+                    cboxZapTip.SelectedValue = z.zaposlenik_tipZaposlenikaID;
+                    cboxZapUstanova.SelectedValue = z.zaposlenik_ustanovaID;
+
+                }
 
             }
             else if (pristupZaposleniku == Pristup.kreiraj)
             {
-                using (var db = new bankakrviEntities())
-                {
-                    cboxZapTip.DataSource = db.tipzaposlenika.ToList();
-                    cboxZapTip.ValueMember = "tipZaposlenikaID";
-                    cboxZapTip.DisplayMember = "naziv";
+                DohvatiPodatke();
+            }
+        }
 
-                    cboxZapUstanova.DataSource = db.ustanova.ToList();
-                    cboxZapUstanova.ValueMember = "ustanovaID";
-                    cboxZapUstanova.DisplayMember = "naziv";
-                }
+        private void DohvatiPodatke()
+        {
+            using (var db = new bankakrviEntities())
+            {
+                cboxZapTip.DataSource = db.tipzaposlenika.ToList();
+                cboxZapTip.ValueMember = "tipZaposlenikaID";
+                cboxZapTip.DisplayMember = "naziv";
+
+                cboxZapUstanova.DataSource = db.ustanova.ToList();
+                cboxZapUstanova.ValueMember = "ustanovaID";
+                cboxZapUstanova.DisplayMember = "naziv";
             }
         }
 
@@ -70,23 +95,47 @@ namespace BankaKrvi
         {
             using (var db = new bankakrviEntities())
             {
-
-                zaposlenik noviZaposlenik = new zaposlenik
+                if (pristupZaposleniku == Pristup.kreiraj)
                 {
-                    ime = tboxZapIme.Text,
-                    prezime = tboxZapPrezime.Text,
-                    korisnickoIme = tboxZapKorIme.Text,
-                    lozinka = tboxZapLozinka.Text,
-                    email = tboxZapEmail.Text,
-                    telefon = tboxZapTelefon.Text,
-                    zaposlenik_tipZaposlenikaID = Convert.ToInt32(cboxZapTip.SelectedValue),
-                    zaposlenik_ustanovaID = Convert.ToInt32(cboxZapUstanova.SelectedValue) 
-                };
-                db.zaposlenik.Add(noviZaposlenik);
+                    z = new zaposlenik();
+                }
+                else if (pristupZaposleniku == Pristup.azuriraj)
+                {
+                    db.zaposlenik.Attach(z);
+                }
+
+                z.ime = tboxZapIme.Text;
+                z.prezime = tboxZapPrezime.Text;
+                z.korisnickoIme = tboxZapKorIme.Text;
+                z.lozinka = tboxZapLozinka.Text;
+                z.email = tboxZapEmail.Text;
+                z.telefon = tboxZapTelefon.Text;
+                z.zaposlenik_tipZaposlenikaID = Convert.ToInt32(cboxZapTip.SelectedValue);
+                z.zaposlenik_ustanovaID = Convert.ToInt32(cboxZapUstanova.SelectedValue);
+
+                if (pristupZaposleniku == Pristup.kreiraj)
+                {
+                    db.zaposlenik.Add(z);
+                }
+
+
                 db.SaveChanges();
+                if (pristupZaposleniku == Pristup.kreiraj)
+                {
+                    MessageBox.Show("Uspješno ste dodali zaposlenika");
+                }
+                else if (pristupZaposleniku == Pristup.azuriraj)
+                {
+                    
+                    MessageBox.Show("Uspješno ste azurirali");
+                }
+
+
+                frmPregledZaposlenika zaposlenik = new frmPregledZaposlenika();
+                zaposlenik.MdiParent = this.MdiParent;
+                zaposlenik.Show();
+                Close();
             }
-            MessageBox.Show("Uspješno ste dodali zaposelnika");
-            Close();
         }
     }
 }

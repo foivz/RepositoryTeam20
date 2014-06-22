@@ -36,19 +36,20 @@
             // dgvZaposlenici
             // 
             this.dgvZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvZaposlenici.Location = new System.Drawing.Point(24, 47);
+            this.dgvZaposlenici.Location = new System.Drawing.Point(24, 12);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
-            this.dgvZaposlenici.Size = new System.Drawing.Size(954, 546);
+            this.dgvZaposlenici.Size = new System.Drawing.Size(954, 334);
             this.dgvZaposlenici.TabIndex = 0;
             // 
             // btnAzurirajZaposlenika
             // 
-            this.btnAzurirajZaposlenika.Location = new System.Drawing.Point(24, 614);
+            this.btnAzurirajZaposlenika.Location = new System.Drawing.Point(24, 402);
             this.btnAzurirajZaposlenika.Name = "btnAzurirajZaposlenika";
             this.btnAzurirajZaposlenika.Size = new System.Drawing.Size(135, 23);
             this.btnAzurirajZaposlenika.TabIndex = 1;
             this.btnAzurirajZaposlenika.Text = "Ažuriraj zaposlenika";
             this.btnAzurirajZaposlenika.UseVisualStyleBackColor = true;
+            this.btnAzurirajZaposlenika.Click += new System.EventHandler(this.btnAzurirajZaposlenika_Click);
             // 
             // frmPregledZaposlenika
             // 

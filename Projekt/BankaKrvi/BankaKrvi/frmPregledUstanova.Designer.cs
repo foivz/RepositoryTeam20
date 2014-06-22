@@ -49,6 +49,7 @@
             this.btnAzurirajUStanovu.TabIndex = 1;
             this.btnAzurirajUStanovu.Text = "Ažuriraj ustanovu";
             this.btnAzurirajUStanovu.UseVisualStyleBackColor = true;
+            this.btnAzurirajUStanovu.Click += new System.EventHandler(this.btnAzurirajUStanovu_Click);
             // 
             // frmPregledUstanova
             // 

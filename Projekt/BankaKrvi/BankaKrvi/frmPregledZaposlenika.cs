@@ -17,6 +17,7 @@ namespace BankaKrvi
         public frmPregledZaposlenika()
         {
             InitializeComponent();
+            this.CenterToParent();
         }
 
         private void PrikaziZaposlenike()
@@ -25,7 +26,7 @@ namespace BankaKrvi
             bsPregledZaposlenika.DataSource = (from z in ctx.zaposlenik
                                                join t in ctx.tipzaposlenika on z.zaposlenik_tipZaposlenikaID equals t.tipZaposlenikaID
                                                join u in ctx.ustanova on z.zaposlenik_ustanovaID equals u.ustanovaID
-                                              select new { z.ime, z.prezime, z.korisnickoIme, z.lozinka, z.email, z.telefon, tip = t.naziv, ustanova = u.naziv  }).ToList();
+                                              select new { z.zaposlenikID, z.ime, z.prezime, z.korisnickoIme, z.lozinka, z.email, z.telefon, tip = t.naziv, ustanova = u.naziv  }).ToList();
 
 
 
@@ -36,6 +37,15 @@ namespace BankaKrvi
         private void frmPregledZaposlenika_Load(object sender, EventArgs e)
         {
             PrikaziZaposlenike();
+        }
+
+        private void btnAzurirajZaposlenika_Click(object sender, EventArgs e)
+        {
+            int odabrano = int.Parse(dgvZaposlenici.CurrentRow.Cells[0].Value.ToString());
+            frmDodavanjeZaposlenika AzurirajZaposlenika = new frmDodavanjeZaposlenika(Pristup.azuriraj, odabrano);
+            AzurirajZaposlenika.MdiParent = this.MdiParent;
+            AzurirajZaposlenika.Show();
+            this.Close();
         }
     }
 }

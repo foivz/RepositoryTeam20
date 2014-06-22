@@ -23,7 +23,7 @@ namespace BankaKrvi
         {
             BindingSource bsPregledUstanova = new BindingSource();
             bsPregledUstanova.DataSource = (from u in ctx.ustanova
-                                            select new { u.naziv, u.adresa, u.email, u.telefon }).ToList();
+                                            select new { u.ustanovaID, u.naziv, u.adresa, u.email, u.telefon }).ToList();
 
 
 
@@ -34,6 +34,12 @@ namespace BankaKrvi
         private void frmPregledUstanova_Load(object sender, EventArgs e)
         {
             PrikaziUstanove();
+        }
+
+        private void btnAzurirajUStanovu_Click(object sender, EventArgs e)
+        {
+            int odabrano = Convert.ToInt32(dgvUstanove.CurrentRow.Cells[0].Value.ToString());
+            MessageBox.Show(odabrano.ToString());
         }
     }
 }
