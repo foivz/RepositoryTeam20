@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace BankaKrvi
 {
@@ -19,17 +21,40 @@ namespace BankaKrvi
 
         private void btnPosaljiMail_Click(object sender, EventArgs e)
         {
-            DialogResult odabir = MessageBox.Show("Poslati ćete mail donatorima s krvnom grupom","Slanje maila",MessageBoxButtons.YesNo);
-
+            int selektirani = int.Parse(dgvZaliheKrvi.CurrentRow.Cells[0].Value.ToString());
+            
+            DialogResult odabir = MessageBox.Show("Poslati ćete mail donatorima s krvnom grupom", "Slanje maila", MessageBoxButtons.YesNo);
             if (odabir == DialogResult.Yes)
             {
-                MessageBox.Show("Odabrali ste da","Odgovor");
+                MessageBox.Show("Odabrali ste da", "Odgovor");
+                using (var db = new bankakrviEntities())
+                {
+                    var pacijenti = db.pacijent.Where(x => x.pacijent_krvnaGrupaID == selektirani);
+                    foreach (var p in pacijenti)
+                    {
+                        posaljiMail(p.email);
+                    }
+                }
             }
             else if (odabir == DialogResult.No)
             {
-                MessageBox.Show("Odabrali ste ne","Odgovor");
+                MessageBox.Show("Odabrali ste ne", "Odgovor");
             }
         }
+
+        private void posaljiMail(string email)
+        {
+            string Mail = "pi.krvnik@gmail.com";
+            string Password = "mislavbago";
+            var client = new SmtpClient("smtp.gmail.com", 587)
+            {
+                Credentials = new NetworkCredential(Mail, Password),
+                EnableSsl = true
+            };
+            client.Send(Mail, email, "Banka krvi", "Molimo vas dajte svoju krv hitno!!!");
+        }
+
+
 
         private void frmPregledStanjaKrvi_Load(object sender, EventArgs e)
         {

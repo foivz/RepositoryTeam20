@@ -229,5 +229,11 @@ E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csproj.GenerateRe
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.pdb
+<<<<<<< Updated upstream
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaAnalize.resources
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaDonacije.resources
+=======
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledTransfuzija.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
+>>>>>>> Stashed changes
