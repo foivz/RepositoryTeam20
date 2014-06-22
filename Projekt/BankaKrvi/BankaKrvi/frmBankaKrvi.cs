@@ -251,5 +251,14 @@ namespace BankaKrvi
                 otvoren = true;
             }
         }
+
+        private void pregledToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmStatistikaAnalize StatistikaAnalize = new frmStatistikaAnalize();
+            StatistikaAnalize.MdiParent = this;
+            StatistikaAnalize.WindowState = FormWindowState.Maximized;
+            StatistikaAnalize.Show();
+        }
     }
 }

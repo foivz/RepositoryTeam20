@@ -205,8 +205,9 @@
             // pregledToolStripMenuItem
             // 
             this.pregledToolStripMenuItem.Name = "pregledToolStripMenuItem";
-            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pregledToolStripMenuItem.Text = "Pregled";
+            this.pregledToolStripMenuItem.Click += new System.EventHandler(this.pregledToolStripMenuItem_Click);
             // 
             // adminToolStripMenuItem
             // 

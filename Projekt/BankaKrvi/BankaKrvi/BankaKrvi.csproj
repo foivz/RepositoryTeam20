@@ -218,6 +218,18 @@
     <Compile Include="frmPrijavaKorisnika.Designer.cs">
       <DependentUpon>frmPrijavaKorisnika.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStatistikaAnalize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatistikaAnalize.Designer.cs">
+      <DependentUpon>frmStatistikaAnalize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatistikaDonacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatistikaDonacije.Designer.cs">
+      <DependentUpon>frmStatistikaDonacije.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTemperaturaHladnjaka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +339,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrijavaKorisnika.resx">
       <DependentUpon>frmPrijavaKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatistikaAnalize.resx">
+      <DependentUpon>frmStatistikaAnalize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatistikaDonacije.resx">
+      <DependentUpon>frmStatistikaDonacije.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTemperaturaHladnjaka.resx">
       <DependentUpon>frmTemperaturaHladnjaka.cs</DependentUpon>
