@@ -121,7 +121,7 @@
             this.dgvDonacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonacije.Location = new System.Drawing.Point(395, 33);
             this.dgvDonacije.Name = "dgvDonacije";
-            this.dgvDonacije.Size = new System.Drawing.Size(417, 150);
+            this.dgvDonacije.Size = new System.Drawing.Size(590, 150);
             this.dgvDonacije.TabIndex = 8;
             // 
             // label5
@@ -155,7 +155,7 @@
             this.dgvReakcije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReakcije.Location = new System.Drawing.Point(395, 263);
             this.dgvReakcije.Name = "dgvReakcije";
-            this.dgvReakcije.Size = new System.Drawing.Size(417, 150);
+            this.dgvReakcije.Size = new System.Drawing.Size(590, 150);
             this.dgvReakcije.TabIndex = 12;
             // 
             // label6
@@ -197,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 502);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnDodajReakciju);
             this.Controls.Add(this.cmbDodajReakcije);
             this.Controls.Add(this.label7);
@@ -217,6 +217,7 @@
             this.Controls.Add(this.btnDodajTransfuziju);
             this.Name = "frmDodavanjeTransfuzije";
             this.Text = "Dodavanje transfuzije";
+            this.Load += new System.EventHandler(this.frmDodavanjeTransfuzije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonacije)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReakcije)).EndInit();
             this.ResumeLayout(false);
