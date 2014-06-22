@@ -37,7 +37,7 @@
             this.dgvStatistikaDonacija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStatistikaDonacija.Location = new System.Drawing.Point(21, 24);
             this.dgvStatistikaDonacija.Name = "dgvStatistikaDonacija";
-            this.dgvStatistikaDonacija.Size = new System.Drawing.Size(963, 535);
+            this.dgvStatistikaDonacija.Size = new System.Drawing.Size(963, 271);
             this.dgvStatistikaDonacija.TabIndex = 0;
             // 
             // frmStatistikaDonacije

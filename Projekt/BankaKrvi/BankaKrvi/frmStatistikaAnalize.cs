@@ -37,9 +37,9 @@ namespace BankaKrvi
             else 
             {
                 MessageBox.Show("Odaberite kategoriju za prikaz");
-            }
-            
-            
+            }  
         }
+
+
     }
 }

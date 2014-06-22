@@ -231,3 +231,4 @@ E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.pdb
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaAnalize.resources
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaDonacije.resources
+E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeBolesti.resources
