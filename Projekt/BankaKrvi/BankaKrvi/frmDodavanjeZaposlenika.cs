@@ -43,7 +43,7 @@ namespace BankaKrvi
             if (pristupZaposleniku == Pristup.azuriraj)
             {
                 this.Text = "Ažuriraj podatke zaposlenika";
-                btnDodajZaposlenika.Text = "Ažuriraj zaposlenika";
+                btnDodajZaposlenika.Text = "";
             }
             else if (pristupZaposleniku == Pristup.kreiraj)
             {

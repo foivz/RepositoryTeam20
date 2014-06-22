@@ -251,5 +251,14 @@ namespace BankaKrvi
                 otvoren = true;
             }
         }
+
+        private void dodajBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmDodavanjeBolesti DodavanjeBolesti = new frmDodavanjeBolesti(Pristup.kreiraj);
+            DodavanjeBolesti.MdiParent = this;
+            DodavanjeBolesti.WindowState = FormWindowState.Maximized;
+            DodavanjeBolesti.Show();
+        }
     }
 }
