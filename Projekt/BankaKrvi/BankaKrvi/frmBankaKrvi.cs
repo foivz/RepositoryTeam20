@@ -23,6 +23,18 @@ namespace BankaKrvi
             this.CenterToScreen();
 
             lblLogiraniKorisnik.Text = "Prijavljen kao: " + Sesija.ime + " " + Sesija.prezime;
+            if (Sesija.uloga == 1)
+            {
+                lblLogiraniUloga.Text = " - Zaposlenik";
+
+            }
+            else if (Sesija.uloga == 2)
+            {
+                lblLogiraniUloga.Text = " - Administrator";
+            }
+            {
+
+            }
         }
 
         private void provjeriAktivneForme()
@@ -119,6 +131,10 @@ namespace BankaKrvi
         private void frmBankaKrvi_Load(object sender, EventArgs e)
         {
 
+            if (Sesija.uloga == 1)
+            {
+                adminToolStripMenuItem.Visible = false;
+            }
         }
 
         private void generiranjeListeDonoraToolStripMenuItem_Click(object sender, EventArgs e)

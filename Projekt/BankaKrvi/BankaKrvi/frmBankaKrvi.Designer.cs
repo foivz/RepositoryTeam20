@@ -63,6 +63,7 @@
             this.mjeracTemperature = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblLogiraniKorisnik = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblLogiraniUloga = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -324,7 +325,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblLogiraniKorisnik});
+            this.lblLogiraniKorisnik,
+            this.lblLogiraniUloga});
             this.statusStrip1.Location = new System.Drawing.Point(0, 640);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1008, 22);
@@ -335,6 +337,11 @@
             // 
             this.lblLogiraniKorisnik.Name = "lblLogiraniKorisnik";
             this.lblLogiraniKorisnik.Size = new System.Drawing.Size(0, 17);
+            // 
+            // lblLogiraniUloga
+            // 
+            this.lblLogiraniUloga.Name = "lblLogiraniUloga";
+            this.lblLogiraniUloga.Size = new System.Drawing.Size(0, 17);
             // 
             // frmBankaKrvi
             // 
@@ -393,6 +400,7 @@
         private System.Windows.Forms.Timer mjeracTemperature;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblLogiraniKorisnik;
+        private System.Windows.Forms.ToolStripStatusLabel lblLogiraniUloga;
     }
 }
 
