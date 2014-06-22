@@ -21,6 +21,8 @@ namespace BankaKrvi
         {
             InitializeComponent();
             this.CenterToScreen();
+
+            lblLogiraniKorisnik.Text = "Prijavljen kao: " + Sesija.ime + " " + Sesija.prezime;
         }
 
         private void provjeriAktivneForme()

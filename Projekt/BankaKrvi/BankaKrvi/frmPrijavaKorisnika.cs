@@ -15,6 +15,10 @@ namespace BankaKrvi
     public partial class frmPrijavaKorisnika : Form
     {
         bankakrviEntities ctx = new bankakrviEntities();
+        /*int zaposlenikID = 0;
+        string ime = "";
+        string prezime = "";
+        int uloga = 0;*/
 
         public frmPrijavaKorisnika()
         {
@@ -44,6 +48,15 @@ namespace BankaKrvi
                 if (z.korisnickoIme == korIme && z.lozinka == lozinka)
                 {
                     postoji = true;
+                    int zaposlenikID = z.zaposlenikID;
+                    string ime = z.ime;
+                    string prezime = z.prezime;
+                    int uloga = z.zaposlenik_tipZaposlenikaID;
+
+                    Sesija.zaposlenikID = zaposlenikID;
+                    Sesija.ime = ime;
+                    Sesija.prezime = prezime;
+                    Sesija.uloga = uloga;
                     break;
                 } 
             }
