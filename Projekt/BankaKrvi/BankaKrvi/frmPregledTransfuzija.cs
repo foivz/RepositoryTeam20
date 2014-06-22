@@ -50,6 +50,29 @@ namespace BankaKrvi
             DodavanjeTransfuzije.Show();
             this.Close();
         }
+
+        private void btnPrikaziPosdatke_Click(object sender, EventArgs e)
+        {
+            int odabrano = Convert.ToInt32(dgvTransfuzije.CurrentRow.Cells[0].Value.ToString());
+            BindingSource donacije = new BindingSource();
+            BindingSource reakcije = new BindingSource();
+            using (var db = new bankakrviEntities())
+            {
+
+                donacije.DataSource = (from d in db.donacija
+                                       join p in db.pacijent on d.donacija_pacijentID equals p.pacijentID
+                                       where d.transfuzija.FirstOrDefault().transfuzijaID == odabrano
+                                       select new { d.donacijaID, d.vrijeme, d.napomena, d.kolicina, prezime = p.prezime, ime = p.ime }).ToList();
+
+                /*reakcije.DataSource = (from t in db.transfuzija
+                                       join p in db.pacijent on t.transfuzija_pacijentID equals p.pacijentID
+                                       join tip in db.tipptreakcije on t.tipptreakcije.FirstOrDefault().tipPtReakcijeID equals tip.tipPtReakcijeID
+                                       where t.transfuzijaID == odabrano
+                                       select new { t.transfuzijaID, p.pacijentID, p.prezime, p.ime }).ToList();*/
+            }
+            dgvDonacije.DataSource = donacije;
+            dgvReakcije.DataSource = reakcije;
+        }
         
 
 
