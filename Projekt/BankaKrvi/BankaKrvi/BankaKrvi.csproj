@@ -316,6 +316,9 @@
     <EmbeddedResource Include="frmPregledStanjaKrvi.resx">
       <DependentUpon>frmPregledStanjaKrvi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPregledTransfuzija.resx">
+      <DependentUpon>frmPregledTransfuzija.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPregledUstanova.resx">
       <DependentUpon>frmPregledUstanova.cs</DependentUpon>
     </EmbeddedResource>
