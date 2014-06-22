@@ -257,3 +257,8 @@ C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\
 C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaDonacije.resources
 C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
 C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
+C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.dll
+C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\itextsharp.dll
+C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.xml
+C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\itextsharp.xml
+C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmGenerirajPotvrdu.resources

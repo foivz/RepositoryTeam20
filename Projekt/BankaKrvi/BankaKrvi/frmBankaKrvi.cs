@@ -288,5 +288,11 @@ namespace BankaKrvi
             GenerirajPotvrdu.Show();
 
         }
+
+        private void pomoćToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/0B3AfdFgL997MOGhOSUY4SUhONW8/edit?usp=sharing");
+        }
     }
 }
