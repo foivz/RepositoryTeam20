@@ -28,19 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ListaDonoraDataset = new BankaKrvi.ListaDonoraDataset();
+            this.listadonoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listadonoraTableAdapter = new BankaKrvi.ListaDonoraDatasetTableAdapters.listadonoraTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaDonoraDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadonoraBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.listadonoraBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "BankaKrvi.ListaDonoraReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(34, 23);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(946, 596);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // ListaDonoraDataset
+            // 
+            this.ListaDonoraDataset.DataSetName = "ListaDonoraDataset";
+            this.ListaDonoraDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listadonoraBindingSource
+            // 
+            this.listadonoraBindingSource.DataMember = "listadonora";
+            this.listadonoraBindingSource.DataSource = this.ListaDonoraDataset;
+            // 
+            // listadonoraTableAdapter
+            // 
+            this.listadonoraTableAdapter.ClearBeforeFill = true;
             // 
             // frmListaDonora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 742);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "frmListaDonora";
             this.Text = "Lista donora";
+            this.Load += new System.EventHandler(this.frmListaDonora_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ListaDonoraDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadonoraBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource listadonoraBindingSource;
+        private ListaDonoraDataset ListaDonoraDataset;
+        private ListaDonoraDatasetTableAdapters.listadonoraTableAdapter listadonoraTableAdapter;
     }
 }

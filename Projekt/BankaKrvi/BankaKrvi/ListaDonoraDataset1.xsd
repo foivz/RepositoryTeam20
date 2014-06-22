@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ListaDonoraDataset" targetNamespace="http://tempuri.org/ListaDonoraDataset1.xsd" xmlns:mstns="http://tempuri.org/ListaDonoraDataset1.xsd" xmlns="http://tempuri.org/ListaDonoraDataset1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bankakrviConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bankakrviConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BankaKrvi.Properties.Settings.GlobalReference.Default.bankakrviConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listadonoraTableAdapter" GeneratorDataComponentClassName="listadonoraTableAdapter" Name="listadonora" UserDataComponentName="listadonoraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bankakrviConnectionString (Settings)" DbObjectName="bankakrvi.listadonora" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `OIB`, `ime`, `prezime`, `naziv`, `vrijeme` FROM `bankakrvi`.`listadonora`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OIB" DataSetColumn="OIB" />
+              <Mapping SourceColumn="ime" DataSetColumn="ime" />
+              <Mapping SourceColumn="prezime" DataSetColumn="prezime" />
+              <Mapping SourceColumn="naziv" DataSetColumn="naziv" />
+              <Mapping SourceColumn="vrijeme" DataSetColumn="vrijeme" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ListaDonoraDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ListaDonoraDataset" msprop:Generator_UserDSName="ListaDonoraDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="listadonora" msprop:Generator_TableClassName="listadonoraDataTable" msprop:Generator_TableVarName="tablelistadonora" msprop:Generator_TablePropName="listadonora" msprop:Generator_RowDeletingName="listadonoraRowDeleting" msprop:Generator_RowChangingName="listadonoraRowChanging" msprop:Generator_RowEvHandlerName="listadonoraRowChangeEventHandler" msprop:Generator_RowDeletedName="listadonoraRowDeleted" msprop:Generator_UserTableName="listadonora" msprop:Generator_RowChangedName="listadonoraRowChanged" msprop:Generator_RowEvArgName="listadonoraRowChangeEvent" msprop:Generator_RowClassName="listadonoraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OIB" msprop:Generator_ColumnVarNameInTable="columnOIB" msprop:Generator_ColumnPropNameInRow="OIB" msprop:Generator_ColumnPropNameInTable="OIBColumn" msprop:Generator_UserColumnName="OIB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ime" msprop:Generator_ColumnVarNameInTable="columnime" msprop:Generator_ColumnPropNameInRow="ime" msprop:Generator_ColumnPropNameInTable="imeColumn" msprop:Generator_UserColumnName="ime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prezime" msprop:Generator_ColumnVarNameInTable="columnprezime" msprop:Generator_ColumnPropNameInRow="prezime" msprop:Generator_ColumnPropNameInTable="prezimeColumn" msprop:Generator_UserColumnName="prezime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="naziv" msprop:Generator_ColumnVarNameInTable="columnnaziv" msprop:Generator_ColumnPropNameInRow="naziv" msprop:Generator_ColumnPropNameInTable="nazivColumn" msprop:Generator_UserColumnName="naziv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vrijeme" msprop:Generator_ColumnVarNameInTable="columnvrijeme" msprop:Generator_ColumnPropNameInRow="vrijeme" msprop:Generator_ColumnPropNameInTable="vrijemeColumn" msprop:Generator_UserColumnName="vrijeme" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -159,3 +159,5 @@ C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\De
 C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeHladnjaka.resources
 C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmTemperaturaHladnjaka.resources
 E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmTemperaturaHladnjaka.resources
+E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
+E:\BankaKrviPi\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled

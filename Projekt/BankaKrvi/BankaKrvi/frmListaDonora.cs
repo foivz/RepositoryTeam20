@@ -16,5 +16,13 @@ namespace BankaKrvi
         {
             InitializeComponent();
         }
+
+        private void frmListaDonora_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ListaDonoraDataset.listadonora' table. You can move, or remove it, as needed.
+            this.listadonoraTableAdapter.Fill(this.ListaDonoraDataset.listadonora);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
