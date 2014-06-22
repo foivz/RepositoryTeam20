@@ -36,7 +36,7 @@
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="GoogleChartSharp">
-      <HintPath>C:\Users\vlazar\Desktop\GoogleChartSharp-1.0.2\GoogleChartSharp.dll</HintPath>
+      <HintPath>googlecharts\GoogleChartSharp.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.1\lib\itextsharp.dll</HintPath>
