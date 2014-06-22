@@ -38,8 +38,11 @@ namespace BankaKrvi
 
         private void btnAzurirajUStanovu_Click(object sender, EventArgs e)
         {
-            int odabrano = Convert.ToInt32(dgvUstanove.CurrentRow.Cells[0].Value.ToString());
-            MessageBox.Show(odabrano.ToString());
+            int odabrano = int.Parse(dgvUstanove.CurrentRow.Cells[0].Value.ToString());
+            frmDodavanjeUstanova AzurirajUstanove = new frmDodavanjeUstanova(Pristup.azuriraj, odabrano);
+            AzurirajUstanove.MdiParent = this.MdiParent;
+            AzurirajUstanove.Show();
+            this.Close();
         }
     }
 }

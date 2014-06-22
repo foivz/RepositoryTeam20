@@ -22,7 +22,7 @@ namespace BankaKrvi
         {
             BindingSource bsPregledBolesti = new BindingSource();
             bsPregledBolesti.DataSource = (from b in ctx.bolest
-                                            select new { b.naziv }).ToList();
+                                            select new { b.bolestID, b.naziv }).ToList();
 
 
 
@@ -34,6 +34,15 @@ namespace BankaKrvi
         {
             PrikaziBolesti();
 
+        }
+
+        private void btnAzurirajBolest_Click(object sender, EventArgs e)
+        {
+            int odabrano = int.Parse(dgvBolesti.CurrentRow.Cells[0].Value.ToString());
+            frmDodavanjeBolesti AzurirajBolesti = new frmDodavanjeBolesti(Pristup.azuriraj, odabrano);
+            AzurirajBolesti.MdiParent = this.MdiParent;
+            AzurirajBolesti.Show();
+            this.Close();
         }
     }
 }

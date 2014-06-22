@@ -38,17 +38,18 @@
             this.dgvBolesti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBolesti.Location = new System.Drawing.Point(25, 52);
             this.dgvBolesti.Name = "dgvBolesti";
-            this.dgvBolesti.Size = new System.Drawing.Size(965, 539);
+            this.dgvBolesti.Size = new System.Drawing.Size(965, 243);
             this.dgvBolesti.TabIndex = 0;
             // 
             // btnAzurirajBolest
             // 
-            this.btnAzurirajBolest.Location = new System.Drawing.Point(25, 611);
+            this.btnAzurirajBolest.Location = new System.Drawing.Point(25, 355);
             this.btnAzurirajBolest.Name = "btnAzurirajBolest";
             this.btnAzurirajBolest.Size = new System.Drawing.Size(164, 23);
             this.btnAzurirajBolest.TabIndex = 1;
             this.btnAzurirajBolest.Text = "Ažuriraj bolest";
             this.btnAzurirajBolest.UseVisualStyleBackColor = true;
+            this.btnAzurirajBolest.Click += new System.EventHandler(this.btnAzurirajBolest_Click);
             // 
             // frmPregledBolesti
             // 

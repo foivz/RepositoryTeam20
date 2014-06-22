@@ -104,6 +104,12 @@
     <Compile Include="frmDodajTest.Designer.cs">
       <DependentUpon>frmDodajTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDodavanjeBolesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodavanjeBolesti.Designer.cs">
+      <DependentUpon>frmDodavanjeBolesti.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDodavanjeUstanova.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDodajTest.resx">
       <DependentUpon>frmDodajTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodavanjeBolesti.resx">
+      <DependentUpon>frmDodavanjeBolesti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDodavanjeUstanova.resx">
       <DependentUpon>frmDodavanjeUstanova.cs</DependentUpon>

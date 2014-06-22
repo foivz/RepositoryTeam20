@@ -38,12 +38,12 @@
             this.dgvUstanove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUstanove.Location = new System.Drawing.Point(33, 28);
             this.dgvUstanove.Name = "dgvUstanove";
-            this.dgvUstanove.Size = new System.Drawing.Size(944, 551);
+            this.dgvUstanove.Size = new System.Drawing.Size(944, 338);
             this.dgvUstanove.TabIndex = 0;
             // 
             // btnAzurirajUStanovu
             // 
-            this.btnAzurirajUStanovu.Location = new System.Drawing.Point(33, 607);
+            this.btnAzurirajUStanovu.Location = new System.Drawing.Point(33, 430);
             this.btnAzurirajUStanovu.Name = "btnAzurirajUStanovu";
             this.btnAzurirajUStanovu.Size = new System.Drawing.Size(161, 23);
             this.btnAzurirajUStanovu.TabIndex = 1;
