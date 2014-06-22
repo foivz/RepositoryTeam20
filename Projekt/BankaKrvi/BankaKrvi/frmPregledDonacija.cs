@@ -29,9 +29,10 @@ namespace BankaKrvi
 
         private void btnAzurirajTest_Click(object sender, EventArgs e)
         {
-            frmDodajTest AžurirajTest = new frmDodajTest(Pristup.azuriraj);
+            int odabrano = Convert.ToInt32(dgvTestovi.CurrentRow.Cells[0].Value.ToString());
+            frmDodajTest AzurirajTest = new frmDodajTest(Pristup.azuriraj, odabrano);
             this.Hide();
-            AžurirajTest.ShowDialog();
+            AzurirajTest.ShowDialog();
             this.Show();
         }
 

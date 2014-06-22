@@ -13,6 +13,8 @@ namespace BankaKrvi
     public partial class frmDodajTest : Form
     {
         private Pristup pristupTestu = Pristup.nista;
+        private test t;
+        private int odabraniTest;
 
         public frmDodajTest(Pristup PristupTestu_)
         {
@@ -23,20 +25,28 @@ namespace BankaKrvi
             PostaviTestFormu();
         }
 
-        /// <summary>
-        /// Poslije samo ne zaboraviti ako je ažuriranje da učitaš podatke o testu iz baze
-        /// Kad si u prethodnoj formi odabrao test koji zelis azurirati, posalji id njega, ili postavi preko metode, i onda u ovoj funkciji
-        /// ovisno o tipu pristupa ( Pristup.azuriraj ) dohvati na temelju tog id-a podatke o tom testu i zaljepi ih na inpute
-        /// </summary>
+        public frmDodajTest(Pristup PristupTestu_, int odabrano)
+        {
+            pristupTestu = PristupTestu_;
+            odabraniTest = odabrano;
+            InitializeComponent();
+            this.CenterToParent();
+
+            PostaviTestFormu();
+        }
+
+
         private void PostaviTestFormu()
         {
             if (pristupTestu == Pristup.azuriraj)
             {
                 this.Text = "Ažuriraj test";
+                btnDntDodaj.Text = "Ažuriraj test";
             }
             else if (pristupTestu == Pristup.kreiraj)
             {
                 this.Text = "Dodaj test";
+                btnDntDodaj.Text = "Dodaj Test";
             }
         }
 
@@ -46,61 +56,85 @@ namespace BankaKrvi
         {
             if (pristupTestu == Pristup.azuriraj)
             {
-                //todo ucitaj podatke testa
+                DohvatiPodatke();
+                using (var db = new bankakrviEntities())
+                {
+                    t = db.test.Where(x => x.testID.Equals(odabraniTest)).First();
+                    cboxDntBolest.SelectedValue = t.test_bolestID;
+                    cboxDntDonacija.SelectedValue = t.test_donacijaID;
+                    ckbDntOdobren.Checked = (bool)t.odobren;
+                    cboxDntUstanova.SelectedValue = t.test_ustanovaID;
+                    dtpDntVrijeme.Value = DateTime.Parse(t.vrijeme.ToString());
+
+                }
 
             }
             else if (pristupTestu == Pristup.kreiraj)
             {
-                using (var db = new bankakrviEntities())
-                {   
+                DohvatiPodatke();
+            }
+        }
 
-                    
+        public void DohvatiPodatke() 
+        {
+            using (var db = new bankakrviEntities())
+            {
 
-                    cboxDntUstanova.DataSource = db.ustanova.ToList();
-                    cboxDntUstanova.ValueMember = "ustanovaID";
-                    cboxDntUstanova.DisplayMember = "naziv";
-                    
-                    cboxDntBolest.DataSource = db.bolest.ToList();
-                    cboxDntBolest.ValueMember = "bolestID";
-                    cboxDntBolest.DisplayMember = "naziv";
+                cboxDntUstanova.DataSource = db.ustanova.ToList();
+                cboxDntUstanova.ValueMember = "ustanovaID";
+                cboxDntUstanova.DisplayMember = "naziv";
 
-                    cboxDntDonacija.DataSource = db.donacija.ToList();
-                    cboxDntDonacija.ValueMember = "donacijaID";
-                    cboxDntDonacija.DisplayMember = "donacijaID";
+                cboxDntBolest.DataSource = db.bolest.ToList();
+                cboxDntBolest.ValueMember = "bolestID";
+                cboxDntBolest.DisplayMember = "naziv";
 
-                   
-                }
+                cboxDntDonacija.DataSource = db.donacija.ToList();
+                cboxDntDonacija.ValueMember = "donacijaID";
+                cboxDntDonacija.DisplayMember = "donacijaID";
+
+
             }
         }
 
         private void btnDntDodaj_Click(object sender, EventArgs e)
         {
-            using (var db = new bankakrviEntities()) 
-            {   
-                bool odobren1 = false;
-                if (cboxDntOdobren.Text == "DA")
+            using (var db = new bankakrviEntities())
+            {
+
+                if (pristupTestu == Pristup.kreiraj)
                 {
-                    odobren1 = true;
+                    t = new test();
                 }
-               
-                test noviTest = new test
-                {  
-                    
-                    odobren = odobren1, 
-                    vrijeme = DateTime.Parse(dtpDntVrijeme.Value.ToString("yyyy-MM-dd hh:mm:ss")),
-                    test_ustanovaID =  Convert.ToInt32(cboxDntUstanova.SelectedValue),
-                    test_bolestID = Convert.ToInt32(cboxDntBolest.SelectedValue),
-                    test_donacijaID = Convert.ToInt32(cboxDntDonacija.SelectedValue)
+                else if (pristupTestu == Pristup.azuriraj)
+                {
+                    db.test.Attach(t);
+                }
 
-                   
-                };
-                db.test.Add(noviTest);
+                t.odobren = ckbDntOdobren.Checked;
+                t.vrijeme = DateTime.Parse(dtpDntVrijeme.Value.ToString());
+                t.test_bolestID = Convert.ToInt32(cboxDntBolest.SelectedValue);
+                t.test_donacijaID = Convert.ToInt32(cboxDntDonacija.SelectedValue);
+                t.test_ustanovaID = Convert.ToInt32(cboxDntUstanova.SelectedValue);
+
+
+                if (pristupTestu == Pristup.kreiraj)
+                {
+                    db.test.Add(t);
+                }
+
                 db.SaveChanges();
-            }
-            MessageBox.Show("Uspiješno ste dodali test");
-            Close();
-        }
 
-        
+                if (pristupTestu == Pristup.kreiraj)
+                {
+                    MessageBox.Show("Uspješno ste dodali test");
+                }
+                else if (pristupTestu == Pristup.azuriraj)
+                {
+                    MessageBox.Show("Uspješno ste azurirali test");
+                }
+
+                Close();
+            }
+        }
     }
 }

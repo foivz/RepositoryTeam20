@@ -39,6 +39,7 @@
             this.cboxDntDonacija = new System.Windows.Forms.ComboBox();
             this.btnDntDodaj = new System.Windows.Forms.Button();
             this.cboxDntOdobren = new System.Windows.Forms.ComboBox();
+            this.ckbDntOdobren = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblDntOdobren
@@ -138,11 +139,22 @@
             this.cboxDntOdobren.Size = new System.Drawing.Size(225, 21);
             this.cboxDntOdobren.TabIndex = 7;
             // 
+            // ckbDntOdobren
+            // 
+            this.ckbDntOdobren.AutoSize = true;
+            this.ckbDntOdobren.Location = new System.Drawing.Point(210, 39);
+            this.ckbDntOdobren.Name = "ckbDntOdobren";
+            this.ckbDntOdobren.Size = new System.Drawing.Size(67, 17);
+            this.ckbDntOdobren.TabIndex = 13;
+            this.ckbDntOdobren.Text = "Odobren";
+            this.ckbDntOdobren.UseVisualStyleBackColor = true;
+            // 
             // frmDodajTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 442);
+            this.Controls.Add(this.ckbDntOdobren);
             this.Controls.Add(this.btnDntDodaj);
             this.Controls.Add(this.cboxDntDonacija);
             this.Controls.Add(this.cboxDntBolest);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.ComboBox cboxDntDonacija;
         private System.Windows.Forms.Button btnDntDodaj;
         private System.Windows.Forms.ComboBox cboxDntOdobren;
+        private System.Windows.Forms.CheckBox ckbDntOdobren;
     }
 }
