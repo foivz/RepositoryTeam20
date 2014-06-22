@@ -242,3 +242,12 @@ C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\De
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeReakcija.resources
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.dll
 E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.xml
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeBolesti.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeReakcija.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmPregledTransfuzija.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaAnalize.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaDonacije.resources
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.dll
+C:\Users\dmirkovi\Documents\GitHub\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.xml
