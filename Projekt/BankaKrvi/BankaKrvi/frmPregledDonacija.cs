@@ -36,7 +36,14 @@ namespace BankaKrvi
             this.Show();
         }
 
-
+        private void btnAzuriranjeDonacije_Click(object sender, EventArgs e)
+        {
+            int odabrano = Convert.ToInt32(dgvDonacije.CurrentRow.Cells[0].Value.ToString());
+            frmDodavanjeDonacije AzurirajDonaciju = new frmDodavanjeDonacije(Pristup.azuriraj, odabrano);
+            AzurirajDonaciju.MdiParent = this.MdiParent;
+            AzurirajDonaciju.Show();
+            this.Close();
+        }
 
         private void PrikaziDonacije()
         {
@@ -80,6 +87,8 @@ namespace BankaKrvi
             int brojTesta = Convert.ToInt16(dgvDonacije.CurrentRow.Index);
             PrikaziTestove(brojTesta);
         }
+
+        
 
       
     }

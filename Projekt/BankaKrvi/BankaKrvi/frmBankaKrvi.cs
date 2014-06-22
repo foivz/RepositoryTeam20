@@ -64,7 +64,7 @@ namespace BankaKrvi
         private void dodavanjeDonacijeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             provjeriAktivneForme();
-            frmDodavanjeDonacije DodavanjeDonacije = new frmDodavanjeDonacije();
+            frmDodavanjeDonacije DodavanjeDonacije = new frmDodavanjeDonacije(Pristup.kreiraj);
             DodavanjeDonacije.MdiParent = this;
             DodavanjeDonacije.WindowState = FormWindowState.Maximized;
             DodavanjeDonacije.Show();

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAzurirajTest = new System.Windows.Forms.Button();
+            this.btnAzuriranjeDonacije = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonacije)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestovi)).BeginInit();
             this.SuspendLayout();
@@ -93,11 +94,22 @@
             this.btnAzurirajTest.UseVisualStyleBackColor = true;
             this.btnAzurirajTest.Click += new System.EventHandler(this.btnAzurirajTest_Click);
             // 
+            // btnAzuriranjeDonacije
+            // 
+            this.btnAzuriranjeDonacije.Location = new System.Drawing.Point(371, 558);
+            this.btnAzuriranjeDonacije.Name = "btnAzuriranjeDonacije";
+            this.btnAzuriranjeDonacije.Size = new System.Drawing.Size(132, 23);
+            this.btnAzuriranjeDonacije.TabIndex = 7;
+            this.btnAzuriranjeDonacije.Text = "Azuriraj Donaciju";
+            this.btnAzuriranjeDonacije.UseVisualStyleBackColor = true;
+            this.btnAzuriranjeDonacije.Click += new System.EventHandler(this.btnAzuriranjeDonacije_Click);
+            // 
             // frmPregledDonacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 644);
+            this.Controls.Add(this.btnAzuriranjeDonacije);
             this.Controls.Add(this.btnAzurirajTest);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAzurirajTest;
+        private System.Windows.Forms.Button btnAzuriranjeDonacije;
     }
 }
