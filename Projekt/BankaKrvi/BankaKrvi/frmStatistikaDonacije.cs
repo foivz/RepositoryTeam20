@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GoogleChartSharp;
 
 namespace BankaKrvi
 {
@@ -35,10 +36,41 @@ namespace BankaKrvi
 
         private void frmStatistikaDonacije_Load(object sender, EventArgs e)
         {
-            PrikaziDonacije(); 
+            PrikaziDonacije();
+
+            var upit = (from p in ctx.pacijent
+                       join d in ctx.donacija on p.pacijentID equals d.donacija_pacijentID
+                       join k in ctx.krvnagrupa on p.pacijent_krvnaGrupaID equals k.krvnaGrupaID
+                       group p by new { k.naziv } into g
+                       select g.Count()).ToList();
+
+            int[] vrijednosti = new int[8];
+            int br = 0;
+            foreach(var s in upit)
+            {
+                //MessageBox.Show("---"+s.ToString());
+                vrijednosti[br] = Convert.ToInt32(s);
+                br++;
+                //MessageBox.Show(br+ " - "+ vrijednosti[br].ToString());
+            }
+
+
+            List<int[]> datasets = new List<int[]>();
+            datasets.Add(vrijednosti);
+            ChartAxis bottomAxis = new ChartAxis(ChartAxisType.Bottom, new string[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-" });
+            ChartAxis leftAxis = new ChartAxis(ChartAxisType.Left);
+            leftAxis.SetRange(0, 50);
+            BarChart barChart = new BarChart(400, 200, BarChartOrientation.Vertical, BarChartStyle.Grouped);
+            barChart.SetTitle("Donacije po krvnim grupama");
+            barChart.AddAxis(bottomAxis);
+            barChart.AddAxis(leftAxis);
+            barChart.SetData(datasets);
+
+            barChart.SetDatasetColors(new string[] { "FF0000" });
+            webBrowser1.Navigate(barChart.GetUrl());
             
         }
 
         
-    }
+    } 
 }

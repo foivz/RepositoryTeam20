@@ -239,3 +239,6 @@ C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\De
 C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmStatistikaDonacije.resources
 C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
 C:\Users\Korisnik1\Documents\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
+E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.frmDodavanjeReakcija.resources
+E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.dll
+E:\BankaKrvi11\Projekt\BankaKrvi\BankaKrvi\bin\Debug\GoogleChartSharp.xml
