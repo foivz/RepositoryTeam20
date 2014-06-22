@@ -30,11 +30,12 @@ namespace BankaKrvi
 
             
             dgvStatistikaDonacija.DataSource = bsPregledDinacija;
+            
         }
 
         private void frmStatistikaDonacije_Load(object sender, EventArgs e)
         {
-            PrikaziDonacije();
+            PrikaziDonacije(); 
             
         }
 

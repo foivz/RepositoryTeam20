@@ -57,5 +57,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvStatistikaDonacija;
+        //private System.Windows.Forms.BindingSource statistikaDonacijeDataSetBindingSource;
+        //private statistikaDonacijeDataSet statistikaDonacijeDataSet;
+        //private System.Windows.Forms.BindingSource statistikadonacijeBindingSource;
+        //private statistikaDonacijeDataSetTableAdapters.statistikadonacijeTableAdapter statistikadonacijeTableAdapter;
     }
 }

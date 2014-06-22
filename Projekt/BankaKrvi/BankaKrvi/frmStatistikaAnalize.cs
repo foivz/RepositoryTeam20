@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BankaKrvi
 {
     public partial class frmStatistikaAnalize : Form
