@@ -30,15 +30,16 @@
         {
             this.dgvStatistikaDonacija = new System.Windows.Forms.DataGridView();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistikaDonacija)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvStatistikaDonacija
             // 
             this.dgvStatistikaDonacija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatistikaDonacija.Location = new System.Drawing.Point(21, 24);
+            this.dgvStatistikaDonacija.Location = new System.Drawing.Point(21, 54);
             this.dgvStatistikaDonacija.Name = "dgvStatistikaDonacija";
-            this.dgvStatistikaDonacija.Size = new System.Drawing.Size(963, 271);
+            this.dgvStatistikaDonacija.Size = new System.Drawing.Size(963, 241);
             this.dgvStatistikaDonacija.TabIndex = 0;
             // 
             // webBrowser1
@@ -49,11 +50,21 @@
             this.webBrowser1.Size = new System.Drawing.Size(600, 300);
             this.webBrowser1.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Donacije po pacijentima";
+            // 
             // frmStatistikaDonacije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.dgvStatistikaDonacija);
             this.Name = "frmStatistikaDonacije";
@@ -61,6 +72,7 @@
             this.Load += new System.EventHandler(this.frmStatistikaDonacije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistikaDonacija)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,6 +80,7 @@
 
         private System.Windows.Forms.DataGridView dgvStatistikaDonacija;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Label label1;
         //private System.Windows.Forms.BindingSource statistikaDonacijeDataSetBindingSource;
         //private statistikaDonacijeDataSet statistikaDonacijeDataSet;
         //private System.Windows.Forms.BindingSource statistikadonacijeBindingSource;

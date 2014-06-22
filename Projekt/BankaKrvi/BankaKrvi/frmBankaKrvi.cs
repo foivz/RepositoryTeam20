@@ -278,5 +278,15 @@ namespace BankaKrvi
             DodavanjeBolesti.WindowState = FormWindowState.Maximized;
             DodavanjeBolesti.Show();
         }
+
+        private void potvrdaZaSlobodneDaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmGenerirajPotvrdu GenerirajPotvrdu = new frmGenerirajPotvrdu();
+            GenerirajPotvrdu.MdiParent = this;
+            GenerirajPotvrdu.WindowState = FormWindowState.Maximized;
+            GenerirajPotvrdu.Show();
+
+        }
     }
 }
