@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDnuNaziv = new System.Windows.Forms.TextBox();
+            this.txtDnuAdresa = new System.Windows.Forms.TextBox();
+            this.txtDnuEmail = new System.Windows.Forms.TextBox();
+            this.txtDnuTelefon = new System.Windows.Forms.TextBox();
             this.btnDodajUstanovu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -75,33 +75,33 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Telefon";
             // 
-            // textBox1
+            // txtDnuNaziv
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtDnuNaziv.Location = new System.Drawing.Point(184, 48);
+            this.txtDnuNaziv.Name = "txtDnuNaziv";
+            this.txtDnuNaziv.Size = new System.Drawing.Size(173, 20);
+            this.txtDnuNaziv.TabIndex = 4;
             // 
-            // textBox2
+            // txtDnuAdresa
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtDnuAdresa.Location = new System.Drawing.Point(184, 94);
+            this.txtDnuAdresa.Name = "txtDnuAdresa";
+            this.txtDnuAdresa.Size = new System.Drawing.Size(173, 20);
+            this.txtDnuAdresa.TabIndex = 5;
             // 
-            // textBox3
+            // txtDnuEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(184, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtDnuEmail.Location = new System.Drawing.Point(184, 144);
+            this.txtDnuEmail.Name = "txtDnuEmail";
+            this.txtDnuEmail.Size = new System.Drawing.Size(173, 20);
+            this.txtDnuEmail.TabIndex = 6;
             // 
-            // textBox4
+            // txtDnuTelefon
             // 
-            this.textBox4.Location = new System.Drawing.Point(184, 188);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtDnuTelefon.Location = new System.Drawing.Point(184, 188);
+            this.txtDnuTelefon.Name = "txtDnuTelefon";
+            this.txtDnuTelefon.Size = new System.Drawing.Size(173, 20);
+            this.txtDnuTelefon.TabIndex = 7;
             // 
             // btnDodajUstanovu
             // 
@@ -119,10 +119,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 339);
             this.Controls.Add(this.btnDodajUstanovu);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDnuTelefon);
+            this.Controls.Add(this.txtDnuEmail);
+            this.Controls.Add(this.txtDnuAdresa);
+            this.Controls.Add(this.txtDnuNaziv);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -140,10 +140,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDnuNaziv;
+        private System.Windows.Forms.TextBox txtDnuAdresa;
+        private System.Windows.Forms.TextBox txtDnuEmail;
+        private System.Windows.Forms.TextBox txtDnuTelefon;
         private System.Windows.Forms.Button btnDodajUstanovu;
     }
 }
