@@ -99,9 +99,9 @@ namespace BankaKrvi
                 }
 
 
-                frmPregledBolesti ustanova = new frmPregledBolesti();
-                ustanova.MdiParent = this.MdiParent;
-                ustanova.Show();
+                frmPregledBolesti bolest = new frmPregledBolesti();
+                bolest.MdiParent = this.MdiParent;
+                bolest.Show();
                 Close();
             }
         }

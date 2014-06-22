@@ -22,7 +22,7 @@ namespace BankaKrvi
         {
             BindingSource bsPregledReakcija = new BindingSource();
             bsPregledReakcija.DataSource = (from r in ctx.tipptreakcije
-                                           select new { r.naziv }).ToList();
+                                           select new { Šifra = r.tipPtReakcijeID, Naziv = r.naziv }).ToList();
 
 
 
@@ -34,6 +34,15 @@ namespace BankaKrvi
         {
             PrikaziReakcije();
 
+        }
+
+        private void btnAzurirajReakciju_Click(object sender, EventArgs e)
+        {
+            int odabrano = int.Parse(dgvReakcije.CurrentRow.Cells[0].Value.ToString());
+            frmDodavanjeReakcija AzurirajReakcije = new frmDodavanjeReakcija(Pristup.azuriraj, odabrano);
+            AzurirajReakcije.MdiParent = this.MdiParent;
+            AzurirajReakcije.Show();
+            this.Close();
         }
     }
 }

@@ -38,17 +38,18 @@
             this.dgvReakcije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReakcije.Location = new System.Drawing.Point(26, 44);
             this.dgvReakcije.Name = "dgvReakcije";
-            this.dgvReakcije.Size = new System.Drawing.Size(959, 529);
+            this.dgvReakcije.Size = new System.Drawing.Size(959, 323);
             this.dgvReakcije.TabIndex = 0;
             // 
             // btnAzurirajReakciju
             // 
-            this.btnAzurirajReakciju.Location = new System.Drawing.Point(26, 597);
+            this.btnAzurirajReakciju.Location = new System.Drawing.Point(26, 467);
             this.btnAzurirajReakciju.Name = "btnAzurirajReakciju";
             this.btnAzurirajReakciju.Size = new System.Drawing.Size(146, 23);
             this.btnAzurirajReakciju.TabIndex = 1;
             this.btnAzurirajReakciju.Text = "Ažuriraj reakciju";
             this.btnAzurirajReakciju.UseVisualStyleBackColor = true;
+            this.btnAzurirajReakciju.Click += new System.EventHandler(this.btnAzurirajReakciju_Click);
             // 
             // frmPregledReakcija
             // 

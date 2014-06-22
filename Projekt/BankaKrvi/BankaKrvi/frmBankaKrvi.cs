@@ -260,5 +260,23 @@ namespace BankaKrvi
             StatistikaAnalize.WindowState = FormWindowState.Maximized;
             StatistikaAnalize.Show();
         }
+
+        private void dodajReakcijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmDodavanjeReakcija DodavanjeReakcija = new frmDodavanjeReakcija(Pristup.kreiraj);
+            DodavanjeReakcija.MdiParent = this;
+            DodavanjeReakcija.WindowState = FormWindowState.Maximized;
+            DodavanjeReakcija.Show();
+        }
+
+        private void dodajBolestiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            provjeriAktivneForme();
+            frmDodavanjeBolesti DodavanjeBolesti = new frmDodavanjeBolesti(Pristup.kreiraj);
+            DodavanjeBolesti.MdiParent = this;
+            DodavanjeBolesti.WindowState = FormWindowState.Maximized;
+            DodavanjeBolesti.Show();
+        }
     }
 }
