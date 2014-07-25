@@ -44,5 +44,21 @@ namespace BankaKrvi
             AzurirajBolesti.Show();
             this.Close();
         }
+
+        private void btnAzurirajBolest_MouseEnter(object sender, EventArgs e)
+        {
+            btnAzurirajBolest.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnAzurirajBolest.Size.Width + 3;
+            int y = btnAzurirajBolest.Size.Height + 3;
+            btnAzurirajBolest.Size = new Size(x, y);
+            btnAzurirajBolest.Font = new System.Drawing.Font(btnAzurirajBolest.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnAzurirajBolest_MouseLeave(object sender, EventArgs e)
+        {
+            btnAzurirajBolest.BackColor = Color.White;
+            btnAzurirajBolest.Size = new Size(164, 34);
+            btnAzurirajBolest.Font = new System.Drawing.Font(btnAzurirajBolest.Font.FontFamily.Name, 10);
+        }
     }
 }

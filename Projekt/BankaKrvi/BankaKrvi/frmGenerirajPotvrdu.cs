@@ -74,6 +74,6 @@ namespace BankaKrvi
             potvrda.Add(Tekst);
 
             potvrda.Close();
-        }
+        }       
     }
 }

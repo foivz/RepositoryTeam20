@@ -35,6 +35,7 @@
             // 
             // dgvZaposlenici
             // 
+            this.dgvZaposlenici.BackgroundColor = System.Drawing.Color.White;
             this.dgvZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZaposlenici.Location = new System.Drawing.Point(24, 12);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
@@ -43,18 +44,24 @@
             // 
             // btnAzurirajZaposlenika
             // 
-            this.btnAzurirajZaposlenika.Location = new System.Drawing.Point(24, 402);
+            this.btnAzurirajZaposlenika.BackColor = System.Drawing.Color.White;
+            this.btnAzurirajZaposlenika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAzurirajZaposlenika.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAzurirajZaposlenika.Location = new System.Drawing.Point(24, 382);
             this.btnAzurirajZaposlenika.Name = "btnAzurirajZaposlenika";
-            this.btnAzurirajZaposlenika.Size = new System.Drawing.Size(135, 23);
+            this.btnAzurirajZaposlenika.Size = new System.Drawing.Size(184, 38);
             this.btnAzurirajZaposlenika.TabIndex = 1;
             this.btnAzurirajZaposlenika.Text = "Ažuriraj zaposlenika";
-            this.btnAzurirajZaposlenika.UseVisualStyleBackColor = true;
+            this.btnAzurirajZaposlenika.UseVisualStyleBackColor = false;
             this.btnAzurirajZaposlenika.Click += new System.EventHandler(this.btnAzurirajZaposlenika_Click);
+            this.btnAzurirajZaposlenika.MouseEnter += new System.EventHandler(this.btnAzurirajZaposlenika_MouseEnter);
+            this.btnAzurirajZaposlenika.MouseLeave += new System.EventHandler(this.btnAzurirajZaposlenika_MouseLeave);
             // 
             // frmPregledZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnAzurirajZaposlenika);
             this.Controls.Add(this.dgvZaposlenici);

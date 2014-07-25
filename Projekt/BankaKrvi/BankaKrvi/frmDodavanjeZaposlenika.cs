@@ -137,5 +137,95 @@ namespace BankaKrvi
                 Close();
             }
         }
+
+        private void tboxZapIme_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(tboxZapIme);
+        }
+
+        private void tboxZapIme_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(tboxZapIme);
+        }
+      
+
+        private void tboxZapPrezime_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(tboxZapPrezime);
+        }
+
+        private void tboxZapPrezime_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(tboxZapPrezime);
+        }
+
+        private void tboxZapKorIme_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(tboxZapKorIme);
+        }
+
+        private void tboxZapKorIme_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(tboxZapKorIme);
+        }
+
+        private void tboxZapLozinka_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(tboxZapLozinka);
+        }
+
+        private void tboxZapLozinka_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(tboxZapLozinka);
+        }
+
+        private void tboxZapEmail_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(tboxZapEmail);
+        }
+
+        private void tboxZapEmail_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(tboxZapEmail);
+        }
+
+        private void tboxZapTelefon_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(tboxZapTelefon);
+        }
+
+        private void tboxZapTelefon_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(tboxZapTelefon);
+        }
+       
+
+        private void btnDodajZaposlenika_MouseEnter(object sender, EventArgs e)
+        {
+            btnDodajZaposlenika.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnDodajZaposlenika.Size.Width + 3;
+            int y = btnDodajZaposlenika.Size.Height + 3;
+            btnDodajZaposlenika.Size = new Size(x, y);
+            btnDodajZaposlenika.Font = new System.Drawing.Font(btnDodajZaposlenika.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnDodajZaposlenika_MouseLeave(object sender, EventArgs e)
+        {
+            btnDodajZaposlenika.BackColor = Color.White;
+            btnDodajZaposlenika.Size = new Size(226, 34);
+            btnDodajZaposlenika.Font = new System.Drawing.Font(btnDodajZaposlenika.Font.FontFamily.Name, 10);
+        }
+        void PovecajOboji(TextBox s)
+        {
+            s.BackColor = Color.FromArgb(204, 255, 255);
+            int x = s.Size.Width + 3;
+            int y = s.Size.Height + 3;
+            s.Size = new Size(x, y);
+        }
+        void VratiNaPocetnoStanje(TextBox s)
+        {
+            s.BackColor = Color.White;
+            s.Size = new Size(226, 20);
+        }
     }
 }

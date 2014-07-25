@@ -47,5 +47,21 @@ namespace BankaKrvi
             AzurirajZaposlenika.Show();
             this.Close();
         }
+
+        private void btnAzurirajZaposlenika_MouseEnter(object sender, EventArgs e)
+        {
+            btnAzurirajZaposlenika.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnAzurirajZaposlenika.Size.Width + 3;
+            int y = btnAzurirajZaposlenika.Size.Height + 3;
+            btnAzurirajZaposlenika.Size = new Size(x, y);
+            btnAzurirajZaposlenika.Font = new System.Drawing.Font(btnAzurirajZaposlenika.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnAzurirajZaposlenika_MouseLeave(object sender, EventArgs e)
+        {
+            btnAzurirajZaposlenika.BackColor = Color.White;
+            btnAzurirajZaposlenika.Size = new Size(184, 38);
+            btnAzurirajZaposlenika.Font = new System.Drawing.Font(btnAzurirajZaposlenika.Font.FontFamily.Name, 10);
+        }
     }
 }

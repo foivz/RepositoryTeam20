@@ -131,5 +131,35 @@ namespace BankaKrvi
                
             }
         }
+
+        private void txtDndNapomena_MouseEnter(object sender, EventArgs e)
+        {
+            txtDndNapomena.BackColor = Color.FromArgb(204, 255, 255);
+            int x = txtDndNapomena.Size.Width + 3;
+            int y = txtDndNapomena.Size.Height + 3;
+            txtDndNapomena.Size = new Size(x, y);
+        }
+
+        private void txtDndNapomena_MouseLeave(object sender, EventArgs e)
+        {
+            txtDndNapomena.BackColor = Color.White;
+            txtDndNapomena.Size = new Size(217, 58);
+        }
+
+        private void btnDndDodaj_MouseEnter(object sender, EventArgs e)
+        {
+            btnDndDodaj.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnDndDodaj.Size.Width + 3;
+            int y = btnDndDodaj.Size.Height + 3;
+            btnDndDodaj.Size = new Size(x, y);
+            btnDndDodaj.Font = new System.Drawing.Font(btnDndDodaj.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnDndDodaj_MouseLeave(object sender, EventArgs e)
+        {
+            btnDndDodaj.BackColor = Color.White;
+            btnDndDodaj.Size = new Size(152, 34);
+            btnDndDodaj.Font = new System.Drawing.Font(btnDndDodaj.Font.FontFamily.Name, 10);
+        }
     }
 }

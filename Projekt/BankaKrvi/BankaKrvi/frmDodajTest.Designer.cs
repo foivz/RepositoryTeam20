@@ -40,137 +40,169 @@
             this.btnDntDodaj = new System.Windows.Forms.Button();
             this.cboxDntOdobren = new System.Windows.Forms.ComboBox();
             this.ckbDntOdobren = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDntOdobren
             // 
             this.lblDntOdobren.AutoSize = true;
-            this.lblDntOdobren.Location = new System.Drawing.Point(138, 77);
+            this.lblDntOdobren.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDntOdobren.Location = new System.Drawing.Point(48, 72);
             this.lblDntOdobren.Name = "lblDntOdobren";
-            this.lblDntOdobren.Size = new System.Drawing.Size(48, 13);
+            this.lblDntOdobren.Size = new System.Drawing.Size(55, 15);
             this.lblDntOdobren.TabIndex = 2;
             this.lblDntOdobren.Text = "Odobren";
             // 
             // lblDntVrijeme
             // 
             this.lblDntVrijeme.AutoSize = true;
-            this.lblDntVrijeme.Location = new System.Drawing.Point(145, 115);
+            this.lblDntVrijeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDntVrijeme.Location = new System.Drawing.Point(55, 110);
             this.lblDntVrijeme.Name = "lblDntVrijeme";
-            this.lblDntVrijeme.Size = new System.Drawing.Size(41, 13);
+            this.lblDntVrijeme.Size = new System.Drawing.Size(49, 15);
             this.lblDntVrijeme.TabIndex = 3;
             this.lblDntVrijeme.Text = "Vrijeme";
             // 
             // lblDntUstanova
             // 
             this.lblDntUstanova.AutoSize = true;
-            this.lblDntUstanova.Location = new System.Drawing.Point(133, 153);
+            this.lblDntUstanova.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDntUstanova.Location = new System.Drawing.Point(43, 148);
             this.lblDntUstanova.Name = "lblDntUstanova";
-            this.lblDntUstanova.Size = new System.Drawing.Size(53, 13);
+            this.lblDntUstanova.Size = new System.Drawing.Size(58, 15);
             this.lblDntUstanova.TabIndex = 4;
             this.lblDntUstanova.Text = "Ustanova";
             // 
             // lblDntBolest
             // 
             this.lblDntBolest.AutoSize = true;
-            this.lblDntBolest.Location = new System.Drawing.Point(150, 191);
+            this.lblDntBolest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDntBolest.Location = new System.Drawing.Point(60, 186);
             this.lblDntBolest.Name = "lblDntBolest";
-            this.lblDntBolest.Size = new System.Drawing.Size(36, 13);
+            this.lblDntBolest.Size = new System.Drawing.Size(41, 15);
             this.lblDntBolest.TabIndex = 5;
             this.lblDntBolest.Text = "Bolest";
             // 
             // lblDntDonacija
             // 
             this.lblDntDonacija.AutoSize = true;
-            this.lblDntDonacija.Location = new System.Drawing.Point(137, 229);
+            this.lblDntDonacija.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDntDonacija.Location = new System.Drawing.Point(47, 224);
             this.lblDntDonacija.Name = "lblDntDonacija";
-            this.lblDntDonacija.Size = new System.Drawing.Size(49, 13);
+            this.lblDntDonacija.Size = new System.Drawing.Size(56, 15);
             this.lblDntDonacija.TabIndex = 6;
             this.lblDntDonacija.Text = "Donacija";
             // 
             // dtpDntVrijeme
             // 
-            this.dtpDntVrijeme.Location = new System.Drawing.Point(210, 113);
+            this.dtpDntVrijeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dtpDntVrijeme.Location = new System.Drawing.Point(120, 108);
             this.dtpDntVrijeme.Name = "dtpDntVrijeme";
-            this.dtpDntVrijeme.Size = new System.Drawing.Size(225, 20);
+            this.dtpDntVrijeme.Size = new System.Drawing.Size(225, 21);
             this.dtpDntVrijeme.TabIndex = 8;
             // 
             // cboxDntUstanova
             // 
+            this.cboxDntUstanova.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cboxDntUstanova.FormattingEnabled = true;
-            this.cboxDntUstanova.Location = new System.Drawing.Point(210, 151);
+            this.cboxDntUstanova.Location = new System.Drawing.Point(120, 146);
             this.cboxDntUstanova.Name = "cboxDntUstanova";
-            this.cboxDntUstanova.Size = new System.Drawing.Size(225, 21);
+            this.cboxDntUstanova.Size = new System.Drawing.Size(225, 23);
             this.cboxDntUstanova.TabIndex = 9;
             // 
             // cboxDntBolest
             // 
+            this.cboxDntBolest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cboxDntBolest.FormattingEnabled = true;
-            this.cboxDntBolest.Location = new System.Drawing.Point(210, 190);
+            this.cboxDntBolest.Location = new System.Drawing.Point(120, 185);
             this.cboxDntBolest.Name = "cboxDntBolest";
-            this.cboxDntBolest.Size = new System.Drawing.Size(225, 21);
+            this.cboxDntBolest.Size = new System.Drawing.Size(225, 23);
             this.cboxDntBolest.TabIndex = 10;
             // 
             // cboxDntDonacija
             // 
+            this.cboxDntDonacija.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cboxDntDonacija.FormattingEnabled = true;
-            this.cboxDntDonacija.Location = new System.Drawing.Point(210, 229);
+            this.cboxDntDonacija.Location = new System.Drawing.Point(120, 224);
             this.cboxDntDonacija.Name = "cboxDntDonacija";
-            this.cboxDntDonacija.Size = new System.Drawing.Size(225, 21);
+            this.cboxDntDonacija.Size = new System.Drawing.Size(225, 23);
             this.cboxDntDonacija.TabIndex = 11;
             // 
             // btnDntDodaj
             // 
-            this.btnDntDodaj.Location = new System.Drawing.Point(210, 297);
+            this.btnDntDodaj.BackColor = System.Drawing.Color.White;
+            this.btnDntDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDntDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDntDodaj.Location = new System.Drawing.Point(162, 265);
             this.btnDntDodaj.Name = "btnDntDodaj";
-            this.btnDntDodaj.Size = new System.Drawing.Size(225, 23);
+            this.btnDntDodaj.Size = new System.Drawing.Size(127, 29);
             this.btnDntDodaj.TabIndex = 12;
             this.btnDntDodaj.Text = "Dodaj Test";
-            this.btnDntDodaj.UseVisualStyleBackColor = true;
+            this.btnDntDodaj.UseVisualStyleBackColor = false;
             this.btnDntDodaj.Click += new System.EventHandler(this.btnDntDodaj_Click);
+            this.btnDntDodaj.MouseEnter += new System.EventHandler(this.btnDntDodaj_MouseEnter);
+            this.btnDntDodaj.MouseLeave += new System.EventHandler(this.btnDntDodaj_MouseLeave);
             // 
             // cboxDntOdobren
             // 
+            this.cboxDntOdobren.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cboxDntOdobren.FormattingEnabled = true;
             this.cboxDntOdobren.Items.AddRange(new object[] {
             "DA",
             "NE"});
-            this.cboxDntOdobren.Location = new System.Drawing.Point(210, 74);
+            this.cboxDntOdobren.Location = new System.Drawing.Point(120, 69);
             this.cboxDntOdobren.Name = "cboxDntOdobren";
-            this.cboxDntOdobren.Size = new System.Drawing.Size(225, 21);
+            this.cboxDntOdobren.Size = new System.Drawing.Size(225, 23);
             this.cboxDntOdobren.TabIndex = 7;
             // 
             // ckbDntOdobren
             // 
             this.ckbDntOdobren.AutoSize = true;
-            this.ckbDntOdobren.Location = new System.Drawing.Point(210, 39);
+            this.ckbDntOdobren.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ckbDntOdobren.Location = new System.Drawing.Point(120, 34);
             this.ckbDntOdobren.Name = "ckbDntOdobren";
-            this.ckbDntOdobren.Size = new System.Drawing.Size(67, 17);
+            this.ckbDntOdobren.Size = new System.Drawing.Size(74, 19);
             this.ckbDntOdobren.TabIndex = 13;
             this.ckbDntOdobren.Text = "Odobren";
             this.ckbDntOdobren.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.dtpDntVrijeme);
+            this.groupBox1.Controls.Add(this.ckbDntOdobren);
+            this.groupBox1.Controls.Add(this.lblDntOdobren);
+            this.groupBox1.Controls.Add(this.btnDntDodaj);
+            this.groupBox1.Controls.Add(this.lblDntVrijeme);
+            this.groupBox1.Controls.Add(this.cboxDntDonacija);
+            this.groupBox1.Controls.Add(this.lblDntUstanova);
+            this.groupBox1.Controls.Add(this.cboxDntBolest);
+            this.groupBox1.Controls.Add(this.lblDntBolest);
+            this.groupBox1.Controls.Add(this.cboxDntUstanova);
+            this.groupBox1.Controls.Add(this.lblDntDonacija);
+            this.groupBox1.Controls.Add(this.cboxDntOdobren);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.Location = new System.Drawing.Point(103, 51);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(395, 331);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dodavanje testa:";
             // 
             // frmDodajTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(624, 442);
-            this.Controls.Add(this.ckbDntOdobren);
-            this.Controls.Add(this.btnDntDodaj);
-            this.Controls.Add(this.cboxDntDonacija);
-            this.Controls.Add(this.cboxDntBolest);
-            this.Controls.Add(this.cboxDntUstanova);
-            this.Controls.Add(this.dtpDntVrijeme);
-            this.Controls.Add(this.cboxDntOdobren);
-            this.Controls.Add(this.lblDntDonacija);
-            this.Controls.Add(this.lblDntBolest);
-            this.Controls.Add(this.lblDntUstanova);
-            this.Controls.Add(this.lblDntVrijeme);
-            this.Controls.Add(this.lblDntOdobren);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmDodajTest";
             this.Text = "Dodaj test";
             this.Load += new System.EventHandler(this.frmDodajTest_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -188,5 +220,6 @@
         private System.Windows.Forms.Button btnDntDodaj;
         private System.Windows.Forms.ComboBox cboxDntOdobren;
         private System.Windows.Forms.CheckBox ckbDntOdobren;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

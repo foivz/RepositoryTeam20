@@ -80,5 +80,21 @@ namespace BankaKrvi
             }
             dgvZaliheKrvi.DataSource = dt;
         }
+
+        private void btnPosaljiMail_MouseEnter(object sender, EventArgs e)
+        {
+            btnPosaljiMail.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnPosaljiMail.Size.Width + 3;
+            int y = btnPosaljiMail.Size.Height + 3;
+            btnPosaljiMail.Size = new Size(x, y);
+            btnPosaljiMail.Font = new System.Drawing.Font(btnPosaljiMail.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnPosaljiMail_MouseLeave(object sender, EventArgs e)
+        {
+            btnPosaljiMail.BackColor = Color.White;
+            btnPosaljiMail.Size = new Size(137,29);
+            btnPosaljiMail.Font = new System.Drawing.Font(btnPosaljiMail.Font.FontFamily.Name, 10);
+        }
     }
 }

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ListaDonoraDataset = new BankaKrvi.ListaDonoraDataset();
             this.listadonoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ListaDonoraDataset = new BankaKrvi.ListaDonoraDataset();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.listadonoraTableAdapter = new BankaKrvi.ListaDonoraDatasetTableAdapters.listadonoraTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ListaDonoraDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadonoraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaDonoraDataset)).BeginInit();
             this.SuspendLayout();
+            // 
+            // listadonoraBindingSource
+            // 
+            this.listadonoraBindingSource.DataMember = "listadonora";
+            this.listadonoraBindingSource.DataSource = this.ListaDonoraDataset;
+            // 
+            // ListaDonoraDataset
+            // 
+            this.ListaDonoraDataset.DataSetName = "ListaDonoraDataset";
+            this.ListaDonoraDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -46,18 +56,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "BankaKrvi.ListaDonoraReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(34, 23);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(946, 596);
+            this.reportViewer1.Size = new System.Drawing.Size(946, 536);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // ListaDonoraDataset
-            // 
-            this.ListaDonoraDataset.DataSetName = "ListaDonoraDataset";
-            this.ListaDonoraDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listadonoraBindingSource
-            // 
-            this.listadonoraBindingSource.DataMember = "listadonora";
-            this.listadonoraBindingSource.DataSource = this.ListaDonoraDataset;
             // 
             // listadonoraTableAdapter
             // 
@@ -67,13 +67,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1008, 622);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmListaDonora";
             this.Text = "Lista donora";
             this.Load += new System.EventHandler(this.frmListaDonora_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ListaDonoraDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadonoraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaDonoraDataset)).EndInit();
             this.ResumeLayout(false);
 
         }

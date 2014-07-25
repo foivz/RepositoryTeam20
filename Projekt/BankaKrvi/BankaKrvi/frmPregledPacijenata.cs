@@ -65,5 +65,21 @@ namespace BankaKrvi
         {
             PrikaziPacijente();
         }
+
+        private void btnAzurirajPacijent_MouseLeave(object sender, EventArgs e)
+        {
+            btnAzurirajPacijent.BackColor = Color.White;
+            btnAzurirajPacijent.Size = new Size(181, 32);
+            btnAzurirajPacijent.Font = new System.Drawing.Font(btnAzurirajPacijent.Font.FontFamily.Name, 10);
+        }
+
+        private void btnAzurirajPacijent_MouseEnter(object sender, EventArgs e)
+        {
+            btnAzurirajPacijent.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnAzurirajPacijent.Size.Width + 3;
+            int y = btnAzurirajPacijent.Size.Height + 3;
+            btnAzurirajPacijent.Size = new Size(x, y);
+            btnAzurirajPacijent.Font = new System.Drawing.Font(btnAzurirajPacijent.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
     }
 }

@@ -136,5 +136,21 @@ namespace BankaKrvi
                 Close();
             }
         }
+
+        private void btnDntDodaj_MouseEnter(object sender, EventArgs e)
+        {
+            btnDntDodaj.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnDntDodaj.Size.Width + 3;
+            int y = btnDntDodaj.Size.Height + 3;
+            btnDntDodaj.Size = new Size(x, y);
+            btnDntDodaj.Font = new System.Drawing.Font(btnDntDodaj.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnDntDodaj_MouseLeave(object sender, EventArgs e)
+        {
+            btnDntDodaj.BackColor = Color.White;
+            btnDntDodaj.Size = new Size(127, 29);
+            btnDntDodaj.Font = new System.Drawing.Font(btnDntDodaj.Font.FontFamily.Name, 10);
+        }
     }
 }

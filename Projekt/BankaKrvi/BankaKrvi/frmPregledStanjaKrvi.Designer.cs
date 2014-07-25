@@ -40,8 +40,9 @@
             this.dgvZaliheKrvi.AllowUserToOrderColumns = true;
             this.dgvZaliheKrvi.AllowUserToResizeColumns = false;
             this.dgvZaliheKrvi.AllowUserToResizeRows = false;
+            this.dgvZaliheKrvi.BackgroundColor = System.Drawing.Color.White;
             this.dgvZaliheKrvi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvZaliheKrvi.Location = new System.Drawing.Point(13, 12);
+            this.dgvZaliheKrvi.Location = new System.Drawing.Point(306, 125);
             this.dgvZaliheKrvi.MultiSelect = false;
             this.dgvZaliheKrvi.Name = "dgvZaliheKrvi";
             this.dgvZaliheKrvi.RowHeadersVisible = false;
@@ -51,19 +52,25 @@
             // 
             // btnPosaljiMail
             // 
-            this.btnPosaljiMail.Location = new System.Drawing.Point(13, 274);
+            this.btnPosaljiMail.BackColor = System.Drawing.Color.White;
+            this.btnPosaljiMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPosaljiMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPosaljiMail.Location = new System.Drawing.Point(306, 404);
             this.btnPosaljiMail.Name = "btnPosaljiMail";
             this.btnPosaljiMail.Size = new System.Drawing.Size(137, 29);
             this.btnPosaljiMail.TabIndex = 1;
             this.btnPosaljiMail.Text = "Pošalji mail donatorima";
-            this.btnPosaljiMail.UseVisualStyleBackColor = true;
+            this.btnPosaljiMail.UseVisualStyleBackColor = false;
             this.btnPosaljiMail.Click += new System.EventHandler(this.btnPosaljiMail_Click);
+            this.btnPosaljiMail.MouseEnter += new System.EventHandler(this.btnPosaljiMail_MouseEnter);
+            this.btnPosaljiMail.MouseLeave += new System.EventHandler(this.btnPosaljiMail_MouseLeave);
             // 
             // frmPregledStanjaKrvi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 442);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnPosaljiMail);
             this.Controls.Add(this.dgvZaliheKrvi);
             this.Name = "frmPregledStanjaKrvi";

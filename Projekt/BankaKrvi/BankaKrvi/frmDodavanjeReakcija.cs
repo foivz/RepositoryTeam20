@@ -106,6 +106,36 @@ namespace BankaKrvi
             }
         }
 
+        private void txtDnrNaziv_MouseEnter(object sender, EventArgs e)
+        {
+            txtDnrNaziv.BackColor = Color.FromArgb(204, 255, 255);
+            int x = txtDnrNaziv.Size.Width + 3;
+            int y = txtDnrNaziv.Size.Height + 3;
+            txtDnrNaziv.Size = new Size(x, y);
+        }
+
+        private void txtDnrNaziv_MouseLeave(object sender, EventArgs e)
+        {
+            txtDnrNaziv.BackColor = Color.White;
+            txtDnrNaziv.Size = new Size(158, 20);
+        }
+
+        private void btnDnrDodaj_MouseEnter(object sender, EventArgs e)
+        {
+            btnDnrDodaj.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnDnrDodaj.Size.Width + 3;
+            int y = btnDnrDodaj.Size.Height + 3;
+            btnDnrDodaj.Size = new Size(x, y);
+            btnDnrDodaj.Font = new System.Drawing.Font(btnDnrDodaj.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnDnrDodaj_MouseLeave(object sender, EventArgs e)
+        {
+            btnDnrDodaj.BackColor = Color.White;
+            btnDnrDodaj.Size = new Size(142, 34);
+            btnDnrDodaj.Font = new System.Drawing.Font(btnDnrDodaj.Font.FontFamily.Name, 10);
+        }
+
         
     }
 }

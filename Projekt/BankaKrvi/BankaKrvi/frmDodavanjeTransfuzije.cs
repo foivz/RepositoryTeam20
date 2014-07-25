@@ -81,5 +81,99 @@ namespace BankaKrvi
             PrikaziDonacije();
             PrikaziReakcije();           
         }
+       
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajObojiTextbox(textBox1);
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeTextbox(textBox1);
+        }
+
+        private void textBox2_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajObojiTextbox(textBox2);
+        }
+
+        private void textBox2_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeTextbox(textBox2);
+        }
+
+        private void textBox3_MouseEnter(object sender, EventArgs e)
+        {           
+            PovecajObojiTextbox(textBox3);
+        }
+
+        private void textBox3_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeTextbox(textBox3);
+        }
+
+        private void btnDodajTransfuziju_MouseEnter(object sender, EventArgs e)
+        {           
+            PovecajObojiButton(btnDodajTransfuziju);
+        }
+
+        private void btnDodajTransfuziju_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeButton(btnDodajTransfuziju);
+        }      
+
+        private void btnDodajDonaciju_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajObojiButton(btnDodajDonaciju);
+        }
+
+        private void btnDodajDonaciju_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeButton(btnDodajDonaciju);
+        }
+
+        private void btnDodajReakciju_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajObojiButton(btnDodajReakciju);
+        }
+
+        private void btnDodajReakciju_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeButton(btnDodajReakciju);
+        }
+        void PovecajObojiTextbox(TextBox s)
+        {
+            s.BackColor = Color.FromArgb(204, 255, 255);
+            int x = s.Size.Width + 3;
+            int y = s.Size.Height + 3;
+            s.Size = new Size(x, y);
+        }
+        void VratiNaPocetnoStanjeTextbox(TextBox s)
+        {
+            s.BackColor = Color.White;
+            if (textBox1 == s)
+            {
+                s.Size = new Size(236, 80);
+            }
+            else
+            {
+                s.Size = new Size(116, 20);
+            }
+        }
+        void PovecajObojiButton(Button b)
+        {
+            b.BackColor = Color.FromArgb(255, 51, 51);
+            int x = b.Size.Width + 3;
+            int y = b.Size.Height + 3;
+            b.Size = new Size(x, y);
+            b.Font = new System.Drawing.Font(b.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+        void VratiNaPocetnoStanjeButton(Button b)
+        {
+            b.BackColor = Color.White;
+            b.Size = new Size(149, 46);
+            b.Font = new System.Drawing.Font(b.Font.FontFamily.Name, 10);
+        }
     }
 }

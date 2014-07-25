@@ -41,6 +41,22 @@ namespace BankaKrvi
             }  
         }
 
+        private void btnPrikazi_MouseEnter(object sender, EventArgs e)
+        {
+            btnPrikazi.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnPrikazi.Size.Width + 3;
+            int y = btnPrikazi.Size.Height + 3;
+            btnPrikazi.Size = new Size(x, y);
+            btnPrikazi.Font = new System.Drawing.Font(btnPrikazi.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnPrikazi_MouseLeave(object sender, EventArgs e)
+        {
+            btnPrikazi.BackColor = Color.White;
+            btnPrikazi.Size = new Size(136, 36);
+            btnPrikazi.Font = new System.Drawing.Font(btnPrikazi.Font.FontFamily.Name, 10);
+        }
+
 
     }
 }

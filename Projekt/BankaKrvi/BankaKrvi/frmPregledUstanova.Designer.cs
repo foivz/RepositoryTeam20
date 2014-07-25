@@ -35,6 +35,7 @@
             // 
             // dgvUstanove
             // 
+            this.dgvUstanove.BackgroundColor = System.Drawing.Color.White;
             this.dgvUstanove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUstanove.Location = new System.Drawing.Point(33, 28);
             this.dgvUstanove.Name = "dgvUstanove";
@@ -43,18 +44,24 @@
             // 
             // btnAzurirajUStanovu
             // 
-            this.btnAzurirajUStanovu.Location = new System.Drawing.Point(33, 430);
+            this.btnAzurirajUStanovu.BackColor = System.Drawing.Color.White;
+            this.btnAzurirajUStanovu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAzurirajUStanovu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAzurirajUStanovu.Location = new System.Drawing.Point(33, 412);
             this.btnAzurirajUStanovu.Name = "btnAzurirajUStanovu";
-            this.btnAzurirajUStanovu.Size = new System.Drawing.Size(161, 23);
+            this.btnAzurirajUStanovu.Size = new System.Drawing.Size(161, 36);
             this.btnAzurirajUStanovu.TabIndex = 1;
             this.btnAzurirajUStanovu.Text = "Ažuriraj ustanovu";
-            this.btnAzurirajUStanovu.UseVisualStyleBackColor = true;
+            this.btnAzurirajUStanovu.UseVisualStyleBackColor = false;
             this.btnAzurirajUStanovu.Click += new System.EventHandler(this.btnAzurirajUStanovu_Click);
+            this.btnAzurirajUStanovu.MouseEnter += new System.EventHandler(this.btnAzurirajUStanovu_MouseEnter);
+            this.btnAzurirajUStanovu.MouseLeave += new System.EventHandler(this.btnAzurirajUStanovu_MouseLeave);
             // 
             // frmPregledUstanova
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnAzurirajUStanovu);
             this.Controls.Add(this.dgvUstanove);

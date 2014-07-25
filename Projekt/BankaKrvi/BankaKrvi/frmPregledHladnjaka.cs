@@ -47,7 +47,40 @@ namespace BankaKrvi
             tempHladnjaka.MdiParent = this.MdiParent;
             tempHladnjaka.Show();
         }
+      
+        private void btnAzuriraj_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajObojiButton(btnAzuriraj);
+        }
 
+        private void btnAzuriraj_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeButton(btnAzuriraj);
+        }
+
+        private void btnTemperaturaHladnjaka_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajObojiButton(btnTemperaturaHladnjaka);
+        }
+
+        private void btnTemperaturaHladnjaka_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanjeButton(btnTemperaturaHladnjaka);
+        }
+        void PovecajObojiButton(Button b)
+        {
+            b.BackColor = Color.FromArgb(255, 51, 51);
+            int x = b.Size.Width + 3;
+            int y = b.Size.Height + 3;
+            b.Size = new Size(x, y);
+            b.Font = new System.Drawing.Font(b.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+        void VratiNaPocetnoStanjeButton(Button b)
+        {
+            b.BackColor = Color.White;
+            b.Size = new Size(190, 34);
+            b.Font = new System.Drawing.Font(b.Font.FontFamily.Name, 10);
+        }
 
     }
 }

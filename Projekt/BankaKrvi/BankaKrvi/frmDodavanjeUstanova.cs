@@ -113,5 +113,74 @@ namespace BankaKrvi
                  Close();
             }
         }
+       
+
+        private void btnDodajUstanovu_MouseEnter(object sender, EventArgs e)
+        {
+            btnDodajUstanovu.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnDodajUstanovu.Size.Width + 3;
+            int y = btnDodajUstanovu.Size.Height + 3;
+            btnDodajUstanovu.Size = new Size(x, y);
+            btnDodajUstanovu.Font = new System.Drawing.Font(btnDodajUstanovu.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnDodajUstanovu_MouseLeave(object sender, EventArgs e)
+        {
+            btnDodajUstanovu.BackColor = Color.White;
+            btnDodajUstanovu.Size = new Size(155, 36);
+            btnDodajUstanovu.Font = new System.Drawing.Font(btnDodajUstanovu.Font.FontFamily.Name, 10);
+        }
+
+        private void txtDnuNaziv_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txtDnuNaziv);
+        }
+
+        private void txtDnuNaziv_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txtDnuNaziv);
+        }
+
+        private void txtDnuAdresa_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txtDnuAdresa);
+        }
+
+        private void txtDnuAdresa_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txtDnuAdresa);
+        }
+
+        private void txtDnuEmail_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txtDnuEmail);
+        }
+
+        private void txtDnuEmail_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txtDnuEmail);
+        }
+
+        private void txtDnuTelefon_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txtDnuTelefon);
+        }
+
+        private void txtDnuTelefon_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txtDnuTelefon);
+        }
+        void PovecajOboji(TextBox s)
+        {
+            s.BackColor = Color.FromArgb(204, 255, 255);
+            int x = s.Size.Width + 3;
+            int y = s.Size.Height + 3;
+            s.Size = new Size(x, y);
+        }
+        void VratiNaPocetnoStanje(TextBox s)
+        {
+            s.BackColor = Color.White;
+            s.Size = new Size(173, 20);
+        }
     }
 }

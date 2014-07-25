@@ -55,21 +55,27 @@
             // 
             // dgvPacijenti
             // 
+            this.dgvPacijenti.BackgroundColor = System.Drawing.Color.White;
             this.dgvPacijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPacijenti.Location = new System.Drawing.Point(29, 47);
+            this.dgvPacijenti.Location = new System.Drawing.Point(23, 22);
             this.dgvPacijenti.Name = "dgvPacijenti";
-            this.dgvPacijenti.Size = new System.Drawing.Size(955, 492);
+            this.dgvPacijenti.Size = new System.Drawing.Size(985, 439);
             this.dgvPacijenti.TabIndex = 2;
             // 
             // btnAzurirajPacijent
             // 
-            this.btnAzurirajPacijent.Location = new System.Drawing.Point(29, 563);
+            this.btnAzurirajPacijent.BackColor = System.Drawing.Color.White;
+            this.btnAzurirajPacijent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAzurirajPacijent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAzurirajPacijent.Location = new System.Drawing.Point(23, 491);
             this.btnAzurirajPacijent.Name = "btnAzurirajPacijent";
-            this.btnAzurirajPacijent.Size = new System.Drawing.Size(141, 23);
+            this.btnAzurirajPacijent.Size = new System.Drawing.Size(181, 32);
             this.btnAzurirajPacijent.TabIndex = 3;
             this.btnAzurirajPacijent.Text = "Ažuriraj pacijenta";
-            this.btnAzurirajPacijent.UseVisualStyleBackColor = true;
+            this.btnAzurirajPacijent.UseVisualStyleBackColor = false;
             this.btnAzurirajPacijent.Click += new System.EventHandler(this.btnAzurirajPacijent_Click);
+            this.btnAzurirajPacijent.MouseEnter += new System.EventHandler(this.btnAzurirajPacijent_MouseEnter);
+            this.btnAzurirajPacijent.MouseLeave += new System.EventHandler(this.btnAzurirajPacijent_MouseLeave);
             // 
             // pacijentBindingSource
             // 
@@ -91,6 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnAzurirajPacijent);
             this.Controls.Add(this.dgvPacijenti);

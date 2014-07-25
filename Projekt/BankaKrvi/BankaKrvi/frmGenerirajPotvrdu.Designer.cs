@@ -35,6 +35,7 @@
             // 
             // dgvPregled
             // 
+            this.dgvPregled.BackgroundColor = System.Drawing.Color.White;
             this.dgvPregled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPregled.Location = new System.Drawing.Point(12, 12);
             this.dgvPregled.Name = "dgvPregled";
@@ -43,18 +44,22 @@
             // 
             // btnKreiraj
             // 
-            this.btnKreiraj.Location = new System.Drawing.Point(12, 389);
+            this.btnKreiraj.BackColor = System.Drawing.Color.White;
+            this.btnKreiraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKreiraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnKreiraj.Location = new System.Drawing.Point(12, 395);
             this.btnKreiraj.Name = "btnKreiraj";
-            this.btnKreiraj.Size = new System.Drawing.Size(134, 23);
+            this.btnKreiraj.Size = new System.Drawing.Size(154, 30);
             this.btnKreiraj.TabIndex = 1;
             this.btnKreiraj.Text = "Kreiraj potvrdu";
-            this.btnKreiraj.UseVisualStyleBackColor = true;
+            this.btnKreiraj.UseVisualStyleBackColor = false;
             this.btnKreiraj.Click += new System.EventHandler(this.btnKreiraj_Click);
             // 
             // frmGenerirajPotvrdu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnKreiraj);
             this.Controls.Add(this.dgvPregled);

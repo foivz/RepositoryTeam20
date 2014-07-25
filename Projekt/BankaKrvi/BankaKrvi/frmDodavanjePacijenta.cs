@@ -152,6 +152,116 @@ namespace BankaKrvi
                 Close();
             }
         }
+
+        private void btnDnpDodaj_MouseLeave(object sender, EventArgs e)
+        {
+            btnDnpDodaj.BackColor = Color.White;
+            btnDnpDodaj.Size = new Size(232, 31);
+            btnDnpDodaj.Font = new System.Drawing.Font(btnDnpDodaj.Font.FontFamily.Name, 10);
+        }
+
+      
+        private void txbDnpOIB_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpOIB);
+        }
         
+        private void txbDnpIme_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpIme);
+        }
+       private void txbDnpPrezime_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpPrezime);
+        }   
+
+        private void txbDnpAdresa_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpAdresa);
+        }
+
+         private void txbDnpTelefon_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpTelefon);
+        }
+
+     
+        private void txbDnpEmail_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpEmail);
+        }
+
+       
+        private void txbDnpPolicaOsiguranja_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpPolicaOsiguranja);
+        }
+
+      
+        private void txbDnpTezina_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(txbDnpTezina);
+        }
+
+        private void txbDnpOIB_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpOIB);
+        }
+
+        private void txbDnpIme_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpIme);
+        }
+
+        private void txbDnpPrezime_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpPrezime);
+        }
+
+        private void txbDnpAdresa_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpAdresa);
+        }
+
+        private void txbDnpTelefon_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpTelefon);
+        }
+
+        private void txbDnpEmail_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpEmail);
+        }
+
+        private void txbDnpPolicaOsiguranja_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(txbDnpPolicaOsiguranja);
+        }
+
+        private void txbDnpTezina_MouseEnter(object sender, EventArgs e)
+        {   
+            PovecajOboji(txbDnpTezina);            
+        }
+
+        private void btnDnpDodaj_MouseEnter(object sender, EventArgs e)
+        {
+            btnDnpDodaj.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnDnpDodaj.Size.Width + 3;
+            int y = btnDnpDodaj.Size.Height + 3;
+            btnDnpDodaj.Size = new Size(x, y);
+            btnDnpDodaj.Font = new System.Drawing.Font(btnDnpDodaj.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+        void PovecajOboji(TextBox s) 
+        {
+            s.BackColor = Color.FromArgb(204, 255, 255);
+            int x = s.Size.Width + 3;
+            int y = s.Size.Height + 3;
+            s.Size = new Size(x, y);
+        }
+        void VratiNaPocetnoStanje(TextBox s)
+        {
+            s.BackColor = Color.White;
+            s.Size = new Size(232, 20);
+        }
     }
 }

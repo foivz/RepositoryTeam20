@@ -95,7 +95,50 @@ namespace BankaKrvi
             PrikaziTestove(brojTesta);
         }
 
-        
+        private void btnDodajTest_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(btnDodajTest);
+        }
+
+        private void btnDodajTest_MouseLeave(object sender, EventArgs e)
+        {          
+            VratiNaPocetnoStanje(btnDodajTest);
+        }
+
+        private void btnAzurirajTest_MouseEnter(object sender, EventArgs e)
+        {          
+            PovecajOboji(btnAzurirajTest);
+        }
+
+        private void btnAzurirajTest_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(btnAzurirajTest);
+        }
+
+        private void btnAzuriranjeDonacije_MouseEnter(object sender, EventArgs e)
+        {
+            PovecajOboji(btnAzuriranjeDonacije);
+        }
+
+        private void btnAzuriranjeDonacije_MouseLeave(object sender, EventArgs e)
+        {
+            VratiNaPocetnoStanje(btnAzuriranjeDonacije);
+        }
+
+        void PovecajOboji(Button s)
+        {            
+            s.BackColor = Color.FromArgb(255, 51, 51);
+            int x = s.Size.Width + 3;
+            int y = s.Size.Height + 3;
+            s.Size = new Size(x, y);
+            s.Font = new System.Drawing.Font(s.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+        void VratiNaPocetnoStanje(Button s)
+        {
+            s.BackColor = Color.White;
+            s.Size = new Size(186, 33);
+            s.Font = new System.Drawing.Font(s.Font.FontFamily.Name, 10);
+        }
 
       
     }

@@ -44,5 +44,21 @@ namespace BankaKrvi
             AzurirajReakcije.Show();
             this.Close();
         }
+
+        private void btnAzurirajReakciju_MouseEnter(object sender, EventArgs e)
+        {
+            btnAzurirajReakciju.BackColor = Color.FromArgb(255, 51, 51);
+            int x = btnAzurirajReakciju.Size.Width + 3;
+            int y = btnAzurirajReakciju.Size.Height + 3;
+            btnAzurirajReakciju.Size = new Size(x, y);
+            btnAzurirajReakciju.Font = new System.Drawing.Font(btnAzurirajReakciju.Font.FontFamily.Name, 11, FontStyle.Bold);
+        }
+
+        private void btnAzurirajReakciju_MouseLeave(object sender, EventArgs e)
+        {
+            btnAzurirajReakciju.BackColor = Color.White;
+            btnAzurirajReakciju.Size = new Size(156, 34);
+            btnAzurirajReakciju.Font = new System.Drawing.Font(btnAzurirajReakciju.Font.FontFamily.Name, 10);
+        }
     }
 }
