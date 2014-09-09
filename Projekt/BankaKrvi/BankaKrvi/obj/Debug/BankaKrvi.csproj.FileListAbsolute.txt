@@ -348,3 +348,6 @@ C:\Users\Filip\Desktop\PROJEKT\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.P
 C:\Users\Filip\Desktop\PROJEKT\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.csproj.GenerateResource.Cache
 C:\Users\Filip\Desktop\PROJEKT\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.cache
 C:\Users\Filip\Desktop\PROJEKT\Projekt\BankaKrvi\BankaKrvi\obj\Debug\RdlCompile.compiled
+C:\Users\Filip\Documents\GitHub\RepositoryTeam20\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\bin\Debug\BankaKrvi.exe.config
+C:\Users\Filip\Documents\GitHub\RepositoryTeam20\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.exe
+C:\Users\Filip\Documents\GitHub\RepositoryTeam20\RepositoryTeam20\Projekt\BankaKrvi\BankaKrvi\obj\Debug\BankaKrvi.pdb
